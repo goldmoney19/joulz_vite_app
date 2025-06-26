@@ -1,0 +1,300 @@
+#root {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+.con{
+
+
+width:700px;
+height:500px;
+ font-family: 'EB Garamond',serif;
+}
+
+.portfolio_con{
+
+  border: none;
+width:100%;
+min-height:400px;
+
+}
+
+.portfolio_text{
+color: rgb(100, 52, 52);
+  padding-top: 60px;
+}
+
+.portfolio_text2{
+
+  font-size: 16px;
+  padding-top: 30px;
+  color: rgb(100, 52, 52);
+}
+
+.about_cover{
+  border:none;
+  min-height: 420px;
+  margin-top:40px;
+   font-family: "EB Garamond",serif;
+}
+
+.about_row{
+  border:none;
+  min-height: 400px;
+  margin-bottom: 30px;
+  margin-top:40px;
+}
+
+
+.about_text{
+ padding-bottom: 20px;
+ color: rgb(100, 52, 52)
+}
+
+.about_text2{
+
+  font-size: 17px;
+  margin-top: 120px;
+  color: rgb(100, 52, 52)
+}
+
+.shop_con{
+
+  border:none;
+  min-height:400px;
+  margin: 70px;
+    font-family: "EB Garamond",serif;
+}
+
+.shop_text{
+
+  margin-top: 70p;
+  padding-bottom: 30px;
+  color: rgb(100, 52, 52);
+}
+
+.shop_text2{
+
+  font-size: 19px;
+  color: rgb(100, 52, 52);
+}
+.shop_text3{
+
+  font-size: 16px;
+  color: rgb(100, 52, 52);
+}
+
+
+.shop_price{
+
+  font-size: 16px;
+  color: rgb(100, 52, 52);
+}
+
+.shop_text_row3{
+  padding-top: 30px;
+  color: rgb(100, 52, 52);
+}
+
+.buy{
+  margin-left:10px;
+}
+
+.whatWeOffer_con{
+  border:none;
+  min-height:440px;
+  margin-top: 0px;
+  font-family: "EB Garamond",serif;
+}
+
+.whatweoffer_text{
+
+  color: rgb(100, 52, 52);
+}
+
+.whatWeOffer_text2{
+
+  text-align: center;
+ margin-top: 30px;
+  font-size: 17px;
+  border:none;
+  color: rgb(100, 52, 52);
+
+}
+
+.we_offername{
+
+  font-size: 20px;
+  padding-top: 20px;
+  color: rgb(100, 52, 52);
+}
+
+
+.why_chooseCon{
+  border:none;
+  height:450px;
+  font-family: "EB Garamond",serif;
+  color: rgb(100, 52, 52);
+}
+
+.why_choose_row{
+border:none;
+padding-top: 50px;
+
+}
+
+.whyChoose_image{
+ border:none;
+ height:300px;
+
+}
+
+.whyChoose_text2{
+
+  list-style-type: disc;
+  font-size: 18px;
+  color: rgb(100, 52, 52);
+}
+
+.aboutPage_con{
+ font-family: "EB Garamond",serif;
+ margin-top: 50px;
+ min-height: 500px;
+ border:none;
+}
+
+.about_pageCover{
+  
+  border:none;
+  height: 400px;
+  margin-bottom: 60px;
+}
+
+.founderImg img{
+  margin-top: 20px;
+
+ height: 300px; 
+}
+
+.founderText{
+font-size:19px ;
+padding-top: 60px;
+}
+
+.ourStory_row{
+background-color: black;
+border: none;
+height: 400px;
+margin-top: 50px;
+color: white;
+margin-bottom: 70px;
+}
+
+.ourStory_text1{
+
+  padding-top: 50px;
+  padding-bottom: 40px;
+}
+
+
+.ourStory_text2{
+font-size: 18px;
+border: none;
+line-height: 2.5rem;
+}
+
+.mission_cover{
+border:none;
+margin-bottom: 70px;
+height: 300px;
+
+}
+
+.mission_cover ul{
+  font-size: 19px;
+  list-style-type: none;
+}
+
+
+
+.vision_cover{
+
+  border:none;
+}
+
+.vision_cover ul{
+
+  font-size: 19px;
+}
+
+@media screen and (max-width:1000px){
+
+
+  .App{
+
+    height: 100%;
+    /* border:2px solid blue; */
+    margin:0;
+    padding: 0;
+    width:100%;
+  }
+
+  /* #root {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+
+
+
+  .navbar-wrapper {
+    margin-left:0px;
+    border:none;
+   }
+  
+
+  .navbar-wrapper a{
+    padding-left:10px;
+    border:none;
+    color: white;
+    padding-top:70px;
+   }
+   
+ */
+
+
+}
+/* @media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+} */
