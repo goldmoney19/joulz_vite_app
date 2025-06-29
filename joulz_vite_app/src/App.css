@@ -423,6 +423,40 @@ color: white;
 margin-bottom: 70px;
 }
 
+.about_cover{
+  border:none;
+  min-height: 420px;
+  margin-top:40px;
+   font-family: "EB Garamond",serif;
+}
+
+.about_row{
+  border:none;
+  min-height: 400px;
+  margin-bottom: 30px;
+  margin-top:40px;
+}
+
+
+.about_text{
+ padding-bottom: 20px;
+ color: rgb(100, 52, 52);
+ 
+}
+
+.about_text2{
+ padding-top: 20px;
+ color: rgb(100, 52, 52);
+ font-size: 17px;
+ 
+}
+
+
+.about_button{
+
+width: 150px;
+}
+
   .App{
 
     height: 100%;
