@@ -76,7 +76,7 @@ luxurious hotel, we curate every element to reflect elegance, comfort, and indiv
  
     <img src = {imagg1 }
                        style={{height:130, width:'250px'}}/>
-<br></br><br></br>
+
  
     <ul style={{listStyleType:'none'}}>
       <li>To be Africa’s leading luxury interior design firm, redefining sophistication and setting 

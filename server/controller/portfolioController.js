@@ -105,7 +105,7 @@ res.status(500).json({errorMessage:error.message})
 }
 
 
-export const updatePortfolioByid = async(req, res) =>  {
+export const updateProductByid = async(req, res) =>  {
        
     try{
           const id = req.params.id;

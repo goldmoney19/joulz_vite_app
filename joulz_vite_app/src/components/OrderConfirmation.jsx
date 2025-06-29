@@ -2,6 +2,7 @@ import React from 'react'
 import { useLocation, useNavigate } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import axios from 'axios';
+import {Button, Container, Row, Col} from 'react-bootstrap'
 
 import Cookies from "cookie-universal"
 
@@ -42,41 +43,67 @@ console.log(error);
 }
 
 
-const totalPrice = order.items.reduce((total, item) => {
-
-    return total + item.productId.price * item.quantity;
-
-   }, 0).toFixed(2);
 
 
-//   console.log(order.fullname);
-//   console.log(address);
-//    console.log(state);
-//  console.log(order.items);
-//  console.log(order._id);
-//   console.log(order.totalPrice);
             
-            return <div> 
-        <p>order confimation</p>
-        <p>{order.fullname}</p>
-         <p>{order.address}</p> 
-         <p>{order.state}</p>
-    
-         {order.items?.map((item, index) =>(
-             <div key = {index}>
+            return <div style = {{border:'',width:'100%',
+ paddingTop:'50px'}}> 
+            
+   <Container style = {{border:'none',marginTop:'10px'}}>
+
+ <Row style = {{border:'none',marginBottom:'120px',paddingTop:'100px'}}>
+ <Col sm= {12} className = 'table-responsive'>
+ <h6>Your Order Has Been Placed Successfully</h6>
+             <table className = 'table table-striped table-bordered ' style = {{width:'90%',}}>
+             <thead>
+                 <tr>
+                 <td>Name</td>
+                  <td>Address</td>
+                    <td>State</td>
+                    <td>item</td>
+                     <td>price</td>
+                      <td>quantity</td>
+                      </tr>
+                                </thead>
+
+                                 <tbody>
+                                 {order.items?.map((item, index) =>(
+             
        
-          <p>title: {item.title} </p> 
-          <p>qty: {item.quantity}</p>  
-          <p> price: ${item.price.toFixed(2)}</p> 
+                                    <tr>
+                                     <td>{order.fullname}</td>
+                                       <td>{order.address}</td>
+                                       <td>order.state</td>
+                                      <td>{item.title}</td>
+                                     
+                                      <td>${item.price.toFixed(2)}</td>
+                                       <td> {item.quantity}</td>
+                                       
+                                    </tr>
+                                      ))}
+                                </tbody>
+                                </table>
+      
+    
          
-          </div>
-         ))}
         
         <br></br>
-       
-        <br></br>
+       <p style = {{fontWeight:'bold'}}>subtotal : {order.totalPrice}</p>
+        
+<br></br>
+<br></br>
+<br></br>
+<br></br>
+  <button type='button' 
+        className = 'btn btn-sm btn-dark'
+        style = {{width:'190px',textAlign:'center'}} 
+        onClick={handlePayment}
+        >Pay with Paystack</button>
+      
+</Col>
 
-        <button type='button' onClick={handlePayment}>Pay with Paystack</button>
+        </Row>
+</Container>
           </div>
      
    

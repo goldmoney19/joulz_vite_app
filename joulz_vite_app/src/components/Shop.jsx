@@ -45,8 +45,8 @@ function Shop() {
 
                 <Row className='shop_row2'>
                     <Col>
-                    <p className='shop_text2'  >Joulz Interiors we work in different aspect
-                         of Home Decoration  </p>
+                    {/* <p className='shop_text2'  >Joulz Interiors we work in different aspect
+                         of Home Decoration  </p> */}
                     </Col>
                 </Row>
 
@@ -57,14 +57,14 @@ function Shop() {
                    {
                    
                    products.map((item, index) => (
-                    <Col  key = {index}  xs = {6} sm={3}>
+                    <Col  key = {index}  xs = {6} sm={3} >
                     <div >
                        <Nav.Link href ={`/productDetails/` +item._id} type='button'><img  style={{height: '150px', width: '150px'}}  src = {`http://localhost:8000/${item?.image}`}
                        /></Nav.Link>
-                      <p  className='shop_text3'>{item.title}</p>
-
-                        <span className='shop_price'>${item.price}</span>
-                        <p><Button className='btn btn-sm btn-secondary buy'><Nav.Link href ={`/productDetails/` +item._id}>Buy now</Nav.Link></Button></p>
+                      <p  className='shop_text4'>{item.title}</p>
+                        <p  className='shop_text3'>{item.smallDescription}</p>
+                        <p className='shop_price'>${item.price}</p>
+                        {/* <p><Button className='btn btn-sm btn-secondary buy'><Nav.Link href ={`/productDetails/` +item._id}>Buy now</Nav.Link></Button></p> */}
                         
                     </div>
                     </Col>

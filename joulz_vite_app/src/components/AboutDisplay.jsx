@@ -27,8 +27,8 @@ function AboutDisplay(){
      it relates to kitchens, joinery and construction. THE excitement of a home renovation
       always brings fresh ideas and inspires our design</p>
 <br></br>
-  <Button className="btn btn-sm btn-secondary">
-    MORE</Button>
+  <button className="btn btn-sm btn-outline-secondary about_button">
+    MORE</button>
             </Col>
           </Row>
 

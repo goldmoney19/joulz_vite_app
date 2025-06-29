@@ -1,6 +1,6 @@
 import React from 'react'
 import {useState , useEffect} from 'react'
-import Button from 'react-bootstrap/Button'
+import {Container,Col,Row, Nav, Navbar,NavLink,Button} from 'react-bootstrap'
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import toast from 'react-hot-toast';
@@ -31,9 +31,16 @@ formData.append("design",design)
 formData.append("image",image)
 multipleImages.forEach((imaggs)=> formData.append('multipleImages', imaggs))
 
-console.log(formData);
+console.log(title);
+console.log(description);
+// console.log(price);
+console.log(image);
+console.log(multipleImages);
 
-                    const portf = {title , description, design, image}
+
+// console.log(formData);
+
+                  
                    
                    await axios.post("http://localhost:8000/api/portfolio", formData)
                   .then((response)=>{
@@ -53,13 +60,52 @@ console.log(formData);
 
 
      return <div> 
+
+        <Container fluid style = {{paddingTop:'70px'}}>
+                  <Row>
+
+                    <Col sm = {2} style = {{border:'1px solid grey',height:'450px'}}>
+       
         <br></br>
-         <h2>Add Portfolio</h2>
+        <div>
+
+         <div style={{border:'1px solid grey'}}>
+                    <Nav.Link href ="/admin_dashboard" >Panel</Nav.Link>
+        </div>
+<br></br> 
+        <div style={{border:'1px solid grey'}}>
+                    <Nav.Link href ="/viewUsers" >view users</Nav.Link>
+        </div>
+         <br></br>
+            <div style={{border:'1px solid grey'}}>
+                    <Nav.Link href ="/insertPortfolio"  >add portfolio</Nav.Link>
+
+          </div>
+          <br></br>
+
+           <div style={{border:'1px solid grey'}}>
+                    <Nav.Link href ="/person" className='btn btn-secondary'>view portfolio</Nav.Link>
+          </div> 
+           <br></br>
+            <div style={{border:'1px solid grey'}}>
+                    <Nav.Link href ="/insertProduct" className='btn btn-secondary'>add product</Nav.Link>
+            </div>
+            <br></br>
+             <div style={{border:'1px solid grey'}}>
+                    <Nav.Link href ="/viewProducts" className='btn btn-secondary'>view product</Nav.Link>
+                     </div>
+                    </div>
+              </Col>
+             <Col sm = {10} style = {{border:'1px solid grey',minHeight:'500px', textAlign:'left'}}>
+        <br></br>
+         <h6>Add Portfolio</h6>
         <form onSubmit={handleSubmit} encType='multipart/form-data'>
 
-         <label>title</label><br></br>
+         <label></label><br></br>
          <input 
+         style = {{backgroundColor:'white',color:'black',borderRadius:'15px',width:'300px'}}
          id='title'
+         placeholder = 'title'
            type='text'  
           name ="title"
            value = {title} 
@@ -70,9 +116,11 @@ console.log(formData);
          <br></br>
          <br></br>
 
-         <label>description</label><br></br>
+         <label></label><br></br>
          <textarea 
+         style = {{backgroundColor:'white',color:'black',borderRadius:'15px',width:'300px'}}
          id="description"
+         placeholder = 'description'
           value ={description}
            name = "description"
            onChange = {(e) => 
@@ -83,9 +131,11 @@ console.log(formData);
          </textarea >
         <br></br>
         <br></br>
-   <label>design</label><br></br>
+   <label></label><br></br>
          <textarea
+         style = {{backgroundColor:'white',color:'black',borderRadius:'15px',width:'300px'}}
          id="design" 
+         placeholder = 'design'
          name = "design"
          value ={design}
            onChange = {(e) => 
@@ -107,36 +157,17 @@ console.log(formData);
 <br>
 </br><br></br>
          
-        {/* <label>category</label>
-        <select 
-           value={author}
-           onChange = {(e) => setAuthor(e.target.value)}
-        >
-          <option value="kitchen">kitchen</option>
-          <option value="pool">pool</option>
-        </select> */}
-        <br></br>
-        <br></br>
+       
+     
 
         <button  type='submit' className='btn btn-primary'>submit</button>
         <br></br>
        
        
         </form>
-        {/* <p>{title}</p>
-
-     <p>{description}</p> 
-
-      <p>{design}</p> 
-      <p>{image}</p>  */}
-     
-     
-
-
-      
-
-
-
+  </Col>
+ </Row>
+       </Container>
           </div>
      }  
 

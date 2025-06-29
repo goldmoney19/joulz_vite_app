@@ -2,7 +2,7 @@ import React from 'react'
 import {useState , useEffect} from 'react'
 import axios from 'axios';
 import {Container, Row, Col, Nav} from 'react-bootstrap'
-
+import Footer from './Footer';
 
 
 
@@ -50,40 +50,75 @@ const UserCart = () =>{
 
                return ( 
                  <div> 
-                  <Container><br></br>
+                  <Container className='userCart_row'>
                   
                   <h3>Cart</h3>
-                        <Row className='userCart_text_row3' >
+                  <br></br>
+                        <Row  >
                      {
                      isLoading ? (
                      <div>loading...</div>
                    ):(
                        
-                    bart.map((item, index) =>(
-                       <Col  key = {item.id} sm = {4} >
+                    bart.map((item, index) =>(<>
+                         <Col key = {item.id} sm = {6} className='userCart_image'>
+                           <img style={{height: '70px', width: '70px'}}  src = 
+{`http://localhost:8000/${item.productId?.image}`}></img>
+                           </Col>
+
+                       <Col  key = {item.id} sm = {6} className='userCart_discCover'>
                                <div key ={index}>
                     
-                              <p style={{fontSize: '13px'}}>  {item.productId?.title} </p>
-<img style={{height: '150px', width: '150px'}}  src = 
-{`http://localhost:8000/${item.productId?.image}`}></img>
-                <p style={{fontSize: '13px', fontWeight:"bold"}}>$ {item.productId?.price}</p>  
-                       <span>qty :</span>  <span style={{fontSize: '13px', fontWeight:"bold"}}>{item.quantity}</span>
+                              <span className='userCart_title'>  {item.productId?.title} </span>
+
+                <span className='userCart_price'>$ {item.productId?.price}</span>  
+                       <span className='userCart_qtyText'></span>  <span className='userCart_qtyNum'>{item.quantity} item(s)</span>
                          
-                         <p>subtotal: ${(item.productId.price * item.quantity).toFixed(2)}</p>
+                         <span className='userCart_subtotal'>Total: ${(item.productId.price * item.quantity).toFixed(2)}</span>
                          
                                </div>
                            </Col>
-                               ))
+                          
+                               </>))
                    )
-                            }
-                            <p>total price:  ${totalPrice}</p>
-                            <span> <button><Nav.Link href ="/checkout" className='btn btn-secondary'>proceed to checkout</Nav.Link></button></span>
-          <br></br>
-          <br></br>
-          <br></br>
-          <br></br>
-                   <span> <button><Nav.Link href ="/shop" className='btn btn-secondary'>continue to shop</Nav.Link></button></span>
 
+
+                            }
+                     
+
+                            </Row>
+                            <Row className="UserCart_totalPriceCover">
+                                <Col sm={12}>
+
+                                <h3 className = 'UserCart_totalText'>Cart Total</h3>
+                           <div style={{width:'100%'}}>
+                                <table style={{width:'100%'}}>
+                                    <thead>
+                                    <tr>
+                                    <th >Subtotal </th>
+                                    <th style={{ textAlign:'right'}}>${totalPrice}</th>
+                                    </tr>
+                                    </thead>
+
+                                </table>
+                                </div>
+
+                            <p className = 'UserCart_totalNum'>subtotal:  ${totalPrice}</p>
+
+                                </Col>
+                                <Col sm={12}>
+                                    
+
+                            <button className='btn btn-warning btn-sm' style={{marginRight:'90px'}}><Nav.Link href ="/checkout" className='btn btn-secondary'>proceed to checkout</Nav.Link></button>
+         
+                   <button className='btn btn-dark btn-sm'><Nav.Link href ="/shop" className='btn btn-secondary'>continue to shop</Nav.Link></button>
+                                </Col>
+                              
+                            </Row>
+                            <Row style={{margintop:"50px"}}>
+                             <Col>
+                               <Footer />
+                             </Col>
                             </Row>
                        </Container>
                    </div>

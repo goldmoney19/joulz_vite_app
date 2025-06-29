@@ -1,10 +1,11 @@
 import React from 'react'
 import {useState , useEffect} from 'react'
-import {Container, Row, Col,Nav} from 'react-bootstrap'
+import {Container, Row, Col,Nav,Button} from 'react-bootstrap'
 import axios from 'axios';
 import {useParams, useNavigate} from 'react-router-dom';
 import toast from 'react-hot-toast';
-
+import '../App.css'
+import Shop from './Shop';
 
 
 
@@ -71,27 +72,41 @@ const ProductDetails = () => {
        }
 
      return  <div > 
-             <Container>
+             <Container fluid className='details_cover' >
               
-             <Nav.Link href ="/shop" className='btn btn-secondary'>more products</Nav.Link>
-
-                <Row className='details_text_row3' >
+<h4 className='details_text1'> Product Details</h4>
+                <Row >
 
                    
                   
                    {
-                   
-                 <Col  key = {penthause.id} sm = {6} >
-                    <div >
-                         <p className='details_text3'>{penthause.title}</p>
-                      <img  style={{height: '150px', width: '200px'}}  src = {`http://localhost:8000/${penthause?.image}`}
+                   <>
+                   <Col key = {penthause.id} sm = {10}  >
+                    <img  style={{height: '400px', width: '100%'}}  src = {`http://localhost:8000/${penthause?.image}`}
                        />
-                        <p className='details_text3'>${penthause.price}</p>
-                        <span className='details_text3' style={{fontSize: '13px'}}>{penthause.description}</span>
+
+                   </Col>
+                   
+
+                    {penthause?.multipleImages?.map((img, index) => (
+                 <Col sm = {3} key ={index} >
+     <span><img  style={{height: '90px', width: '130px',float:'left',marginTop:'40px'}}  src = {`http://localhost:8000/${img}`}></img></span>
+                 </Col>
+            ))}
+                  
+                 <Col  key = {penthause.id} sm = {4} >
+                    <div >
+                     <br></br><br></br>
+                         <p className='details_text2'>{penthause.title}</p>
+                       <p className='details_text3' >{penthause.description}</p>
                        
+                        <p className='details_text4'>${penthause.price}</p>
+                      
  <br></br>
      <br></br>
-                     <label>qty</label>  : 
+     <div className='quantity_cover'>
+                     <label style = {{fontWeight:'bold', marginRight:'20px'}}>Quantity  : </label> 
+   
 
                           <input
                            type = 'Number' 
@@ -101,23 +116,35 @@ const ProductDetails = () => {
                               setQuantity(e.target.value);
                            }}
                            />
-                           {quantity}
-                        <br></br>
-                         <br></br>
-                        <button type='button' onClick={()=>{
+                           {/* {quantity} */}
+                      
+                       <p ><button type='button' className='btn btn-sm' onClick={()=>{
                               
                               // setProductId(penthause.id)
                                    handleAddToCart(penthause._id)
-                        }} style={{backgroundColor: 'black', width: '130px', color: 'white'}}>add to cart</button>
+    }} >Add To cart</button></p>
+    </div>
                     </div>
+                    <br></br>
+                    <br></br>
+                     {/* <Nav.Link href ="/shop" ><button className='btn btn-outline-secondary btn-sm'>More Products</button></Nav.Link> */}
+
                     </Col>
 
                   
                    
                    
-                   } 
+                  </> } 
                    
+
+                </Row>
+
+                <Row>
+
+                  <Col>
                  
+                  <Shop />
+                  </Col>
                 </Row>
 
              </Container>

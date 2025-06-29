@@ -1,9 +1,8 @@
 import React from 'react'
 import {useState , useEffect} from 'react'
-import Button from 'react-bootstrap/Button'
+import {Container,Col,Row, Nav, Navbar,NavLink, Button} from 'react-bootstrap'
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
-import {Container, Nav, Navbar,NavLink,Row} from 'react-bootstrap'
  const user = localStorage.getItem('user');
 
 
@@ -65,14 +64,48 @@ fetchData();
 
 
      return <div> 
-      {/* <Container style={{border: '2px solid red'}}>
-        <Row> */}
+     
+       <Container fluid style = {{paddingTop:'70px'}}>
+             <Row>
+             <Col sm = {2} style = {{border:'1px solid grey',height:'450px'}}>
+       
         <br></br>
-        
+        <div>
+
+         <div style={{border:'1px solid grey'}}>
+                    <Nav.Link href ="/admin_dashboard" >Panel</Nav.Link>
+        </div>
+<br></br> 
+        <div style={{border:'1px solid grey'}}>
+                    <Nav.Link href ="/viewUsers" >view users</Nav.Link>
+        </div>
+         <br></br>
+            <div style={{border:'1px solid grey'}}>
+                    <Nav.Link href ="/insertPortfolio"  >add portfolio</Nav.Link>
+
+          </div>
+          <br></br>
+
+           <div style={{border:'1px solid grey'}}>
+                    <Nav.Link href ="/person" className='btn btn-secondary'>view portfolio</Nav.Link>
+          </div> 
+           <br></br>
+            <div style={{border:'1px solid grey'}}>
+                    <Nav.Link href ="/insertProduct" className='btn btn-secondary'>add product</Nav.Link>
+            </div>
+            <br></br>
+             <div style={{border:'1px solid grey'}}>
+                    <Nav.Link href ="/viewProducts" className='btn btn-secondary'>view product</Nav.Link>
+                     </div>
+                    </div>
+              </Col>
+        <br></br>
+                            <Col sm = {10} style = {{border:'1px solid grey',height:'450px', overflowY:'scroll'}}>
+
    
-      <div className='display_users'> 
-          <Nav.Link href ="/InsertPortfolio">add portfolio</Nav.Link>
-                      <h3>View All Portfolios</h3>
+      <div className='display_users table-responsive' > 
+          
+                      <h6>All Portfolios</h6>
              <table className='table table-bordered table-striped'>
    
                 <thead>
@@ -99,11 +132,11 @@ fetchData();
           <td>{portff.title}</td>
           <td>{portff.description}</td>
           <td>{portff.design}</td>
-           <td><img style={{height: '150px', width: '150px'}}  src = {`http://localhost:8000/${portff?.image}`}></img></td>
+           <td><img style={{height: '30px', width: '30px'}}  src = {`http://localhost:8000/${portff?.image}`}></img></td>
           <td>
             {portff.multipleImages.map((img, index) => (
 
-                          <img key ={index} style={{height: '150px', width: '150px'}}  src = {`http://localhost:8000/${img}`}></img>
+                          <img key ={index} style={{height: '30px', width: '30px'}}  src = {`http://localhost:8000/${img}`}></img>
 
             ))}
             
@@ -123,10 +156,10 @@ fetchData();
              </table>
     
           </div>
+</Col>
 
-
-{/* </Row>
-</Container> */}
+ </Row>
+</Container> 
           </div>
      }  
 

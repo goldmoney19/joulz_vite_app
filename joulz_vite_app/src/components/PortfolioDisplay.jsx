@@ -62,12 +62,12 @@ function PortfolioDisplay() {
                    {
                    
                    products.map((item, index) => (
-                    <Col  key = {index} sm = {3} style={{marginTop:'50px'}}>
+                    <Col  key = {index} xs = {6} sm={3} style={{marginTop:'50px'}}>
                     <div >
-                       <Nav.Link href ={`/productDetails/` +item._id} type='button'><img  style={{height: '200px', width: '250px'}}  src = {`http://localhost:8000/${item?.image}`}
+                       <Nav.Link href ={`/portfolioDetails/` +item._id} type='button'><img  style={{height: '150px', width: '150px'}}  src = {`http://localhost:8000/${item?.image}`}
                        /></Nav.Link>
                        <br></br>
-                      <p style={{fontSize: '18px'}} className='shop_text3'>{item.title}</p>
+                      <p  className='shop_textTitle'>{item.title}</p>
 
                         {/* <span style={{fontSize: '13px', fontWeight:"bold"}} className='shop_text3'>${item.price}</span> */}
                         

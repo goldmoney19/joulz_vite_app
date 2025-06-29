@@ -1,9 +1,8 @@
 import React from 'react'
 import {useState , useEffect} from 'react'
-import Button from 'react-bootstrap/Button'
+import {Container,Col,Row, Nav, Navbar,NavLink,Button} from 'react-bootstrap'
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
-import {Container, Nav, Navbar,NavLink} from 'react-bootstrap'
  const user = localStorage.getItem('user');
 
 
@@ -48,13 +47,62 @@ function ViewProducts(){
 fetchData();
              },[]);
      
+             const deleteProductById = async (userId) => {
+                     await axios.delete(`http://localhost:8000/api/delete/product/${userId}`)
+                    .then((response) => {
+                    setProducts((prevUser)=>prevUser.filter((user)=>user._id !==userId))
+            
+                    })
+                    .catch((error)=>{
+            
+                                 console.log(error)
+                              })
+            
+               }
+
+
+
      return <div> 
+     <Container fluid style = {{paddingTop:'70px'}}>
+             <Row>
+
+                       <Col sm = {2} style = {{border:'1px solid grey',height:'450px'}}>
+                         <div>
+       
+        <div style={{border:'1px solid grey'}}>
+                    <Nav.Link href ="/admin_dashboard" >Panel</Nav.Link>
+        </div>
+<br></br>
+        <div style={{border:'1px solid grey'}}>
+                    <Nav.Link href ="/viewUsers" >view users</Nav.Link>
+        </div>
+         <br></br>
+            <div style={{border:'1px solid grey'}}>
+                    <Nav.Link href ="/insertPortfolio"  >add portfolio</Nav.Link>
+
+          </div>
+          <br></br>
+
+           <div style={{border:'1px solid grey'}}>
+                    <Nav.Link href ="/person" className='btn btn-secondary'>view portfolio</Nav.Link>
+          </div> 
            <br></br>
-           
+            <div style={{border:'1px solid grey'}}>
+                    <Nav.Link href ="/insertProduct" className='btn btn-secondary'>add product</Nav.Link>
+            </div>
+            <br></br>
+             <div style={{border:'1px solid grey'}}>
+                    <Nav.Link href ="/viewProducts" className='btn btn-secondary'>view product</Nav.Link>
+                     </div>
+                    </div>
+              </Col>
+
+           <br></br>
+            <Col sm = {10} style = {{border:'1px solid grey',height:'500px',overflowY:'scroll'}}>
       { console.log(products)}
          <div className='display_users'> 
-             <Nav.Link href ="/InsertProduct" className='btn btn-secondary'>add product</Nav.Link>
-                         <h3>View All Products</h3>
+           
+                         <h6>All Products</h6>
                 <table className='table table-bordered table-striped'>
       
                    <thead>
@@ -62,6 +110,7 @@ fetchData();
                            <th>s/n</th>
                            <th>Title</th>
                            <th>Description</th>
+                             <th>small Description</th>
                            <th>Price</th>
                            <th>Category</th>
                            <th>Keyword</th>
@@ -80,15 +129,16 @@ fetchData();
                        <tr>
             <td>{index + 1}</td>
              <td>{prodts.title}</td>
-             <td>{prodts.description}</td>
+             <td style = {{fontSize:'13px'}}>{prodts.description}</td>
+              <td style = {{fontSize:'13px'}}>{prodts.smallDescription}</td>
              <td>{prodts.price}</td>
               <td>{prodts.category}</td>
                <td>{prodts.keyword}</td>
                
-              <td><img style={{height: '150px', width: '150px'}}  src = {`http://localhost:8000/${prodts?.image}`}></img></td>
+              <td><img style={{height: '30px', width: '30px'}}  src = {`http://localhost:8000/${prodts?.image}`}></img></td>
               {/* {console.log(`http://localhost:8000/${prodts?.image}`)} */}
-              <td className='btn btn-warning btn-sm'> <Nav.Link href ={`/updatePortfolio/` +prodts._id} type='button'>edit</Nav.Link></td>
-          <td className='btn btn-danger btn-sm'> <Nav.Link  onClick = {()=>deleteProduct(prodts._id)}>delete</Nav.Link></td>
+              <td className='btn btn-warning btn-sm'> <Nav.Link href ={`/update_product/` +prodts._id} type='button'>edit</Nav.Link></td>
+          <td className='btn btn-danger btn-sm'> <Nav.Link  onClick = {()=>deleteProductById(prodts._id)}>delete</Nav.Link></td>
         </tr>
    
                          )
@@ -103,7 +153,9 @@ fetchData();
    
    
    
-   
+         </Col>
+             </Row>
+       </Container>
              </div>
      
 }  

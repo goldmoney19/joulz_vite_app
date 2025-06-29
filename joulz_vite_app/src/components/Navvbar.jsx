@@ -4,9 +4,11 @@ import {Link, useNavigate} from 'react-router-dom'
 import Cookies from "cookie-universal"
 import toast from 'react-hot-toast';
 
+
 const cookies = new Cookies();
       
   
+
 
 function Navvbar() {
 
@@ -22,7 +24,8 @@ function Navvbar() {
            localStorage.removeItem("user");
             localStorage.removeItem("user-id");
         
-          
+         toast.success("Logout successful", {position:"top-right"});
+
           navigate("/login");
 
   }
@@ -36,6 +39,7 @@ function Navvbar() {
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">
           <Nav.Link href ="/">Home</Nav.Link>
+          
           <Nav.Link href ="/profile_page">Profile</Nav.Link>
             <Nav.Link href ="/About">About</Nav.Link>
              <Nav.Link href ="/portfolio_display">Portfolios</Nav.Link>
@@ -52,9 +56,11 @@ function Navvbar() {
             </>
             ):(
                  <>
+                 <Nav.Link href ="/contact" >Contact us</Nav.Link>
     <Nav.Link href ="/login" >Login</Nav.Link>
 <Nav.Link href ="/Register" >Signup</Nav.Link>
-<Nav.Link href ="/contact" >Contact us</Nav.Link>
+
+
         </>
           ) }
 

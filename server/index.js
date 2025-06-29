@@ -55,7 +55,8 @@ mongoose
        
         app.use("/portDisp", portf);
        
-    app.use("/api", upload.single('image'), produkt);
+    app.use("/api",  produkt);
+    
       app.use("/shops",  produkt);
 
       app.use("/check",  checkoutRoute);

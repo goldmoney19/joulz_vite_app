@@ -1,5 +1,5 @@
 import {react} from 'react'
-import {Button} from 'react-bootstrap'
+import {Container,Col,Row, Nav, Navbar,NavLink,Button} from 'react-bootstrap'
 import { useState, useEffect } from 'react';
 import axios from 'axios';
  import { useNavigate } from 'react-router-dom';
@@ -51,13 +51,48 @@ const [portfolios, setPortfolio] = useState([]);
              return (
                
                 <div className='display_users'> 
-                      <h5>View All users</h5>
+                  <Container fluid style = {{paddingTop:'70px'}}>
+                  <Row>
+                    <Col style = {{border:'1px solid grey',height:'450px'}} sm = {2}>
+       
+        <br></br>
+        <div>
+       
+        <div style={{border:'1px solid grey'}}>
+                    <Nav.Link href ="/admin_dashboard" >Panel</Nav.Link>
+        </div>
+<br></br>
+        <div style={{border:'1px solid grey'}}>
+                    <Nav.Link href ="/viewUsers" >view users</Nav.Link>
+        </div>
+         <br></br>
+            <div style={{border:'1px solid grey'}}>
+                    <Nav.Link href ="/insertPortfolio"  >add portfolio</Nav.Link>
+
+          </div>
+          <br></br>
+
+           <div style={{border:'1px solid grey'}}>
+                    <Nav.Link href ="/person" className='btn btn-secondary'>view portfolio</Nav.Link>
+          </div> 
+           <br></br>
+            <div style={{border:'1px solid grey'}}>
+                    <Nav.Link href ="/insertProduct" className='btn btn-secondary'>add product</Nav.Link>
+            </div>
+            <br></br>
+             <div style={{border:'1px solid grey'}}>
+                    <Nav.Link href ="/viewProducts" className='btn btn-secondary'>view product</Nav.Link>
+                     </div>
+                    </div>
+              </Col>
+
+              <Col sm = {10} style = {{border:'1px solid grey',height:'500px'}}>
+                      <h6>All users</h6>
              <table className='table table-bordered table=striped'>
    
                 <thead>
                     <tr>
                         <td>s/n</td>
-                        <td>name</td>
                         <td>email</td>
                         
                         <td>delete</td>
@@ -72,7 +107,7 @@ const [portfolios, setPortfolio] = useState([]);
                         return (
                            <tr>
                         <td>{index + 1}</td>
-                        <td>{portff.name}</td>
+                       
                         <td>{portff.email}</td>
                        
                        
@@ -86,7 +121,9 @@ const [portfolios, setPortfolio] = useState([]);
                  
                 </tbody>
              </table>
-   
+             </Col>
+             </Row>
+       </Container>
           </div> )
      }  
 

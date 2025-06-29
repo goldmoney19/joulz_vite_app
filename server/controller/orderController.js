@@ -40,6 +40,13 @@ export const _checkout =  async(req, res) => {
            
            console.log(totalPrice);
 
+             if(!fullname || !address || !state ){
+                 console.log("all inputs are required");
+                 return res.status(400).json({message:"all inputs are required"});
+                
+           
+               }
+
            const clientOrder = new Order({
                     userId:user_id,
                     fullname,

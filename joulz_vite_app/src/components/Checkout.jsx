@@ -1,9 +1,10 @@
 import React from 'react'
 import {useState , useEffect} from 'react'
-import Button from 'react-bootstrap/Button'
+import {Button, Container, Row, Col} from 'react-bootstrap'
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import toast from 'react-hot-toast';
+import Footer from './Footer';
 
 
 
@@ -66,7 +67,7 @@ const user_id = localStorage.getItem("user-id");
                     navigate("/order_confirmation", { state: { clientOrder:response.data.clientOrder}});
                   })
                   .catch((error)=>{
-
+                    toast.error("all fields are required", {position:"top-right"});
                      console.log(error)
                   })
  
@@ -79,44 +80,34 @@ const user_id = localStorage.getItem("user-id");
 
    }, 0).toFixed(2);
 
-     return <div> 
-        <br></br>
-         <h2>checkout  </h2>
+     return <div  style = {{border:'none',minHeight:'500px',backgroundColor:'white'}}> 
+
+     <Container style = {{border:'none',marginTop:'10px'}}>
+
+ <Row style = {{border:'none',marginBottom:'120px',paddingTop:'100px'}}>
        
-        { formData.map((item, index) =>(
-    
-            <div key ={index}>
-                           
-            <p style={{fontSize: '13px'}}>  {item.productId?.title} </p>
-       <img style={{height: '50px', width: '50px'}}  src = 
-       {`http://localhost:8000/${item.productId?.image}`}></img>
-     <p style={{fontSize: '13px', fontWeight:"bold"}}>$ {item.productId?.price}</p>  
-             <span>qty :</span>  <span style={{fontSize: '13px', fontWeight:"bold"}}>{item.quantity}</span>
-                                
-            <p>total: ${(item.productId.price * item.quantity).toFixed(2)}</p>
-            <br></br>
-            <br></br>
-                                
-                                      </div>
-                                  
-                                  
-                                      ))
-                                    }
-                                     <h3>Tatal Amount : {totalPrice}</h3>  
-        <form onSubmit = {handleSubmit}>
-      <label>fullname</label><br></br>
+        <Col sm = {6} style = {{textAlign:'left'}}>
+         <h4>Delivery Information</h4>
+         <br></br>
+            <form onSubmit = {handleSubmit}>
+      <label></label><br></br>
          <input 
          name='title'
            type='text'  
+           style = {{backgroundColor:'white', color:'black',borderRadius:'12px'}}
+           placeholder = 'fullname'
          value = {fullname} 
            onChange = {(e)=>{setFullname(e.target.value)}} 
            />
-         <br></br>
+        
          <br></br>
 
-         <label>address</label><br></br>
+         <label></label><br></br>
          <textarea 
          value ={address}
+         style = {{backgroundColor:'white', color:'black',
+         borderRadius:'12px'}}
+         placeholder = 'address'
            name='description'
            onChange = {(e)=>{setAddress(e.target.value)}}
            >
@@ -124,8 +115,10 @@ const user_id = localStorage.getItem("user-id");
          </textarea >
         <br></br>
         <br></br>
-   <label>state</label><br></br>
+   <label></label>
          <textarea 
+         style = {{backgroundColor:'white', color:'black',borderRadius:'12px'}}
+         placeholder = 'state'
           value ={state}
         name='design'
            onChange = {(e)=>{setState(e.target.value)}}
@@ -134,33 +127,65 @@ const user_id = localStorage.getItem("user-id");
          </textarea >
 
          
-        {/* <label>category</label>
-        <select 
-           value={author}
-           onChange = {(e) => setAuthor(e.target.value)}
-        >
-          <option value="kitchen">kitchen</option>
-          <option value="pool">pool</option>
-        </select> */}
+        
         <br></br>
         <br></br>
+        <br></br>
+        
 
-        <button  type='submit'>submit order</button>
+        <button  type='submit' 
+        style = {{borderRadius:'12px',fontSize:'13px',fontWeight:'bold'}}
+        className = 'btn btn-sm btn-warning'
+        >Place Order</button>
         <br></br>
        
        {fullname}
         </form>
-        {/* <p>{title}</p>
+                                
+                                      </Col>
+       
+          
+            <Col  sm = {6}>
+             <h4>Cart Information</h4>
+         <br></br>
+                            <table  style = {{border:'none',width:'100%'}}>
+                                <thead>
+                                    <tr>
+                                      <td>title</td>
+                                      <td>image</td>
+                                      <td>price</td>
+                                       <td>quantity</td>
+                                        <td>total</td>
+                                    </tr>
+                                </thead>
+                                 <tbody>
+                                   { formData.map((item, index) =>(  
+                                    <tr key ={index}>
+             <td style={{fontSize: '13px'}}> {item.productId?.title}</td>
+             <td><img style={{height: '50px', width: '50px'}}  src = 
+       {`http://localhost:8000/${item.productId?.image}`}></img></td>
+       <td style={{fontSize: '13px', fontWeight:"normal"}}>$ {item.productId?.price}</td>
+    <td  style={{fontSize: '13px', fontWeight:"normal"}}>{item.quantity}</td>
+ <td>${(item.productId.price * item.quantity).toFixed(2)}</td>
+                                    </tr>
+                                                                          ))
+}
+ 
 
-     <p>{description}</p> 
-      */}
-     
+                                </tbody>
 
-
-      
-
-
-
+                            </table> 
+                            <br></br>
+                            <h6>Subtotal : {totalPrice}</h6>   
+            </Col>                               
+ </Row>
+ <br></br>
+  <Row style={{margintop:"150px"}}>
+                             <Col>
+                               <Footer />
+                             </Col>
+                            </Row>
+</Container>
           </div>
      }  
 

@@ -69,11 +69,9 @@ color: rgb(100, 52, 52);
  color: rgb(100, 52, 52)
 }
 
-.about_text2{
+.about_button{
 
-  font-size: 17px;
-  margin-top: 120px;
-  color: rgb(100, 52, 52)
+width: 150px;
 }
 
 .shop_con{
@@ -87,26 +85,38 @@ color: rgb(100, 52, 52);
 .shop_text{
 
   margin-top: 70p;
-  padding-bottom: 30px;
+  padding-bottom: 5px;
   color: rgb(100, 52, 52);
 }
 
 .shop_text2{
 
-  font-size: 19px;
-  color: rgb(100, 52, 52);
+  font-size: 17px;
+  color: black;
 }
 .shop_text3{
-
-  font-size: 16px;
-  color: rgb(100, 52, 52);
+  
+  font-size: 15px;
+  color: black;
+  margin-top: -15px;
+    text-align: left;
 }
 
+.shop_text4{
+
+  font-size: 15px;
+  color: black;
+    text-align: left;
+}
 
 .shop_price{
 
   font-size: 16px;
-  color: rgb(100, 52, 52);
+  color:black;
+  margin-top: -15px;
+  text-align: left;
+  padding-left: 0px;
+  font-weight: bold;
 }
 
 .shop_text_row3{
@@ -149,7 +159,7 @@ color: rgb(100, 52, 52);
 
 
 .why_chooseCon{
-  border:none;
+  border:2px solid red;
   height:450px;
   font-family: "EB Garamond",serif;
   color: rgb(100, 52, 52);
@@ -245,8 +255,173 @@ height: 300px;
   font-size: 19px;
 }
 
+/* .userCart_row{
+
+  border: none;
+} */
+
+.details_cover{
+margin-top: 80px;
+border:none;
+color: rgb(100, 52, 52);
+}
+
+.details_text1{
+  font-family: "EB Garamond",serif;
+margin-top: 30px;
+margin-bottom: 30px;
+color: rgb(100, 52, 52);
+}
+
+.details_text2{
+font-family: "EB Garamond",serif;
+  font-size: 22px;
+  font-weight:nornal;
+ color: rgb(100, 52, 52);
+}
+
+.details_text3{
+font-family: "EB Garamond",serif;
+  font-size: 20px;
+   text-align: left;
+   color: rgb(100, 52, 52);
+}
+
+.details_text4{
+font-family: "EB Garamond",serif;
+  font-size: 20px;
+   text-align: left;
+   font-weight: bold;
+   color: rgb(100, 52, 52);
+}
+
+  .quantity_cover{
+  height:150px;
+    border:none;
+    text-align: left;
+  }
+
+  .quantity_cover input{
+ background-color: white;
+ color: black;
+ border-radius: 30px;
+ width: 90px;
+  }
+
+  .details_cover button{
+  background-color: rgb(92, 79, 63);
+    margin-top: 50px;
+    margin-left: 20px;
+    color: white;
+    font-weight: bold;
+    border-radius: 30px;
+  }
+
+
+  .shop_more{
+
+      font-family: "EB Garamond",serif;
+
+  }
+
+  .userCart_row{
+  
+    border:none;
+    margin-bottom: 40px;
+    margin-top: 90px;
+  }
+
+  .userCart_image{
+
+    text-align: left;
+  }
+
+  .userCart_discCover{
+    border:none;
+    text-align: left;
+    margin-bottom: 30px;
+    font-family: "EB Garamond",serif;
+  }
+
+  .userCart_title{
+font-weight:normal;
+padding-right: 30px;
+  }
+
+  .userCart_price{
+font-weight:normal;
+padding-right: 30px;
+  }
+
+  .userCart_qtyText{
+padding-right: 5px;
+font-weight: normal;
+  }
+
+
+  .userCart_qtyNum{
+padding-right: 30px;
+
+  }
+
+  .userCart_subtotal{
+
+    font-weight: normal;
+  }
+
+  .UserCart_totalPriceCover{
+
+     height:300px;
+    border:none;
+    
+    font-family: "EB Garamond",serif;
+    text-align: left;
+  }
+
+  .UserCart_totalText{
+margin-bottom: 30px;
+text-align: left;
+padding-top: 100px;
+
+  }
+
+  /* .UserCart_totalNum{
+
+
+  } */
+
 @media screen and (max-width:1000px){
 
+  .aboutPage_con{
+ font-family: "EB Garamond",serif;
+ margin-top: 90px;
+ min-height: 500px;
+ border:none;
+}
+  .about_pageCover{
+  
+  border:none;
+  height: 700px;
+  margin-bottom: 60px;
+
+}
+
+
+  .why_chooseCon{
+  border:none;
+  height:820px;
+  font-family: "EB Garamond",serif;
+  color: rgb(100, 52, 52);
+}
+
+.ourStory_row{
+background-color: black;
+border: none;
+height: 700px;
+margin-top: 50px;
+color: white;
+margin-bottom: 70px;
+}
 
   .App{
 

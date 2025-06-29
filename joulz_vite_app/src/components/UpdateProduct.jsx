@@ -7,16 +7,13 @@ import { useNavigate , useParams} from 'react-router-dom';
 
 
 
-function UpdateePortfolio(props){
-   //  const [title, setTitle] = useState("");
-   //   const [description, setDescription] = useState("");
-   //   const [design, setDesign] = useState("");
+function UpdateProduct(props){
 
 
     const dataa = {
     title:"",
     description:"",
-    design:""
+    price:""
   }
     const [formData, setFormData] = useState(dataa);
    
@@ -34,7 +31,7 @@ function UpdateePortfolio(props){
       }
 
  useEffect(() => {
-                         axios.get(`http://localhost:8000/api/portfolio/${id}`)
+                         axios.get(`http://localhost:8000/api/product/${id}`)
                          .then((response)=>{
                           console.log(response)
                           setFormData(response.data)
@@ -51,18 +48,18 @@ function UpdateePortfolio(props){
     const handleSubmit  = async(e) => {
                    e.preventDefault();
 
-                  //   const portf = {title , description, design}
-                   await axios.put(`http://localhost:8000/api/update/portfolio/${id}`, formData)
+                
+                   await axios.put(`http://localhost:8000/api/update/product/${id}`, formData)
                   .then((response)=>{
-                     console.log("portfolio inserted");
-                     navigate("/person");
+                     console.log("product inserted");
+                     navigate("/viewProducts");
                   })
                   .catch((error)=>{
 
                      console.log(error)
                   })
 
-                  //  console.log(portf);
+                
            
 
     }
@@ -71,10 +68,10 @@ function UpdateePortfolio(props){
 
      return <div> 
         <br></br>
-         <h2>Edit Portfolio</h2>
+         <h2>Edit Product</h2>
         <form onSubmit={handleSubmit}>
 
-         <label>Portfolio Title</label><br></br>
+         <label>Product Title</label><br></br>
          <input 
          name='title'
            type='text'  
@@ -84,7 +81,7 @@ function UpdateePortfolio(props){
          <br></br>
          <br></br>
 
-         <label>portfolio Description</label><br></br>
+         <label>product Description</label><br></br>
          <textarea 
          value ={formData.description}
            name='description'
@@ -94,14 +91,15 @@ function UpdateePortfolio(props){
          </textarea >
         <br></br>
         <br></br>
-   <label>portfolio Design</label><br></br>
-         <input
-          value ={formData.design}
-        name='design'
+   <label>product Price</label><br></br>
+         <input 
+         type='number'
+          value ={formData.price}
+        name='price'
            onChange = {onchangeHandler}
            />
            
-        
+         
 
          
        
@@ -113,7 +111,7 @@ function UpdateePortfolio(props){
        
        
         </form>
-       
+        
      
 
 
@@ -124,4 +122,4 @@ function UpdateePortfolio(props){
           </div>
      }  
 
-     export default UpdateePortfolio
+     export default UpdateProduct

@@ -27,6 +27,7 @@ import AboutDisplay from './components/AboutDisplay'
 import WhyChoose from './components/WhyChoose'
 import ProtectedAdminRoute from './components/ProtectedAdminRoute'
 import Unauthorized from './components/Unauthorized'
+import UpdateProduct from './components/UpdateProduct'
 
 
 
@@ -143,7 +144,7 @@ function App() {
 
         <Route path = "/contact" element = {<Contact />} />
 
-
+            <Route path = "/update_product/:id" element = {<UpdateProduct />} />
   <Route path = "/productDetails/:id" element = {<ProductDetails />} />
 
    </Routes>

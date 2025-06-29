@@ -12,6 +12,11 @@ const productSchema = new mongoose.Schema({
                  type:String,
                  required:true
       },
+       smallDescription:{
+                 type:String,
+                 required:true
+      },
+      
       price:{
                  type:String,
                  required:true
@@ -23,7 +28,13 @@ const productSchema = new mongoose.Schema({
       image:{
                    type: String,
                  required: true
+   },
+    multipleImages:{
+
+               type: [String],
+                default: [],
    }
+    
       
 
 

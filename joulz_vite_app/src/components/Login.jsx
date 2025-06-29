@@ -4,6 +4,8 @@ import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import Cookies from "cookie-universal"
 import toast from 'react-hot-toast';
+import {Button, Nav} from 'react-bootstrap'
+
 
 const cookies = new Cookies();
   const token = cookies.get("access-token");
@@ -54,8 +56,10 @@ function Login(){
                       //  console.log(result);
                       //  navigate("/");
                       if(result.data.useRole== "admin"){
+                         toast.success('Login Successful', {position:"top-left"});
                         navigate("/admin_dashboard");
                       }else{
+                toast.success('Login Successful', {position:"top-left"});
                          navigate("/profile_page");
                       }
                     
@@ -65,7 +69,7 @@ function Login(){
 
                     
                     catch(error){
-                    toast.success('wrong credentials', {position:"top-right"});
+                    toast.error('Inputs cannot be empty', {position:"top-right"});
                        console.log(error)
                     }
   
@@ -74,14 +78,16 @@ function Login(){
   
       }
    
-             return <div> 
+             return <div style = {{ fontFamily:' "EB Garamond",serif'}}> 
         <br></br>
          <h2>Login</h2>
         <form onSubmit={handleSubmit}>
 
-         <label>Email</label><br></br>
+         <label></label><br></br>
          <input 
          id='email'
+         placeholder = 'Email'
+          style = {{ backgroundColor:'white', color:'black'}}
            type='email'  
           name ="email"
            value = {email} 
@@ -92,8 +98,10 @@ function Login(){
          <br></br>
          <br></br>
 
-         <label>password</label><br></br>
+         <label></label><br></br>
          <input type='password' 
+          style = {{ backgroundColor:'white', color:'black'}}
+          placeholder = 'Password'
          id="password"
           value ={password}
            name = "password"
@@ -103,20 +111,17 @@ function Login(){
            />
            
         
-        <br></br>
-     
-        {/* <label>category</label>
-        <select 
-           value={author}
-           onChange = {(e) => setAuthor(e.target.value)}
-        >
-          <option value="kitchen">kitchen</option>
-          <option value="pool">pool</option>
-        </select> */}
+        
         <br></br>
         <br></br>
 
         <button  type='submit' className='btn btn-primary'>login</button>
+         <br></br>
+          <br></br>
+            <br></br>
+              <br></br>
+
+      <button className = 'btn btn-sm btn-warning'> <Nav.Link href ="/register"  style = {{color:'white'}}>Signup</Nav.Link></button>
         <br></br>
        
        
