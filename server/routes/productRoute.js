@@ -9,7 +9,7 @@ const produkt = express.Router();
 
 produkt.post("/product", create);
 produkt.get("/shops",  getAllShop);
-produkt.get("/products", authMiddleware, restrictTo("admin"),  getAllProducts);
+produkt.get("/products",  getAllProducts);
 produkt.get("/product/:id", getProductById);
 produkt.put("/update/product/:id", updateProductByid);
 produkt.delete("/delete/product/:id", deleteProductById);
