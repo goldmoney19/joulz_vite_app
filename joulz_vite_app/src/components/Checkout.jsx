@@ -27,7 +27,7 @@ function Checkout(props){
  useEffect(() => {
 
               const userDataa = {user_id:localStorage.getItem('user-id')}
-                         axios.post("http://localhost:8000/api/get_user_cart", userDataa)
+                         axios.post("https://joulz-backend.onrender.com/api/get_user_cart", userDataa)
                          .then((response)=>{
                           console.log(response)
                           setFormData(response.data.cart)
@@ -57,7 +57,7 @@ const user_id = localStorage.getItem("user-id");
 
   
     
- const response = await axios.post("http://localhost:8000/check/check_out", _data)
+ const response = await axios.post("https://joulz-backend.onrender.com/check/check_out", _data)
    .then((response)=>{
 
        
