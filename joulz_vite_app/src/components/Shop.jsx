@@ -19,7 +19,7 @@ function Shop() {
                         const fetchData = async(req, res) => {
         
                         try{
-                 const response = await axios.get("http://localhost:8000/shops/shops" )
+                 const response = await axios.get("https://joulz-backend.onrender.com/shops/shops" )
                   setProducts(response.data);
          
                            }
