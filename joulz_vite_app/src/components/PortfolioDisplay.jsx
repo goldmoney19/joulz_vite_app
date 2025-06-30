@@ -64,7 +64,7 @@ function PortfolioDisplay() {
                    products.map((item, index) => (
                     <Col  key = {index} xs = {6} sm={3} style={{marginTop:'50px'}}>
                     <div >
-                       <Nav.Link href ={`/portfolioDetails/` +item._id} type='button'><img  style={{height: '150px', width: '150px'}}  src = {`http://localhost:8000/${item?.image}`}
+                       <Nav.Link href ={`/portfolioDetails/` +item._id} type='button'><img  style={{height: '150px', width: '150px'}}  src = {`https://joulz-backend.onrender.com/${item?.image}`}
                        /></Nav.Link>
                        <br></br>
                       <p  className='shop_textTitle'>{item.title}</p>
