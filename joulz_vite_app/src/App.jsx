@@ -53,7 +53,7 @@ function App() {
    <Route path = "/about" element = {<About />} />
    
 
-   <Route path = "/portfolio" element = {<Portfolio />} />
+
    
 
    <Route path = "/insertPortfolio" element = {
