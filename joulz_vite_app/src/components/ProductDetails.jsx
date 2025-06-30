@@ -58,7 +58,7 @@ const ProductDetails = () => {
                   
          const _data = {productId:produktId,quantity, user_id}
             
-         axios.post("http://localhost:8000/api/add_To_cart" , _data)
+         axios.post("https://joulz-backend.onrender.com/api/add_To_cart" , _data)
 
           .then(response=>{
                      console.log(response.data);
