@@ -132,11 +132,11 @@ fetchData();
           <td>{portff.title}</td>
           <td>{portff.description}</td>
           <td>{portff.design}</td>
-           <td><img style={{height: '30px', width: '30px'}}  src = {`http://localhost:8000/${portff?.image}`}></img></td>
+           <td><img style={{height: '30px', width: '30px'}}  src = {`https://joulz-backend.onrender.com/${portff?.image}`}></img></td>
           <td>
             {portff.multipleImages.map((img, index) => (
 
-                          <img key ={index} style={{height: '30px', width: '30px'}}  src = {`http://localhost:8000/${img}`}></img>
+                          <img key ={index} style={{height: '30px', width: '30px'}}  src = {`https://joulz-backend.onrender.com/${img}`}></img>
 
             ))}
             
