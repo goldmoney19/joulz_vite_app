@@ -89,9 +89,9 @@ function App() {
 } />
 
 <Route path = "/viewProducts" element = {
-  <ProtectedAdminRoute allowedRoles={'admin'}>
+  
   <ViewProducts />
-</ProtectedAdminRoute>
+
 } />
 
  <Route path = "/login" element = {<Login />} />
