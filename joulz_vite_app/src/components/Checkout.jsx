@@ -163,7 +163,7 @@ const user_id = localStorage.getItem("user-id");
                                     <tr key ={index}>
              <td style={{fontSize: '13px'}}> {item.productId?.title}</td>
              <td><img style={{height: '50px', width: '50px'}}  src = 
-       {`http://localhost:8000/${item.productId?.image}`}></img></td>
+       {`https://joulz-backend.onrender.com/${item.productId?.image}`}></img></td>
        <td style={{fontSize: '13px', fontWeight:"normal"}}>$ {item.productId?.price}</td>
     <td  style={{fontSize: '13px', fontWeight:"normal"}}>{item.quantity}</td>
  <td>${(item.productId.price * item.quantity).toFixed(2)}</td>
