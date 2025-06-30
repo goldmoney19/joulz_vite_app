@@ -28,7 +28,7 @@ function ViewProducts(){
                 const fetchData = async(req, res) => {
 
                 try{
-         const response = await axios.get("http://localhost:8000/api/products" , {
+         const response = await axios.get("https://joulz-backend.onrender.com/api/products" , {
                 headers:{
                           Authorization:`Bearer ${token}`
 
@@ -48,7 +48,7 @@ fetchData();
              },[]);
      
              const deleteProductById = async (userId) => {
-                     await axios.delete(`http://localhost:8000/api/delete/product/${userId}`)
+                     await axios.delete(`https://joulz-backend.onrender.com/api/delete/product/${userId}`)
                     .then((response) => {
                     setProducts((prevUser)=>prevUser.filter((user)=>user._id !==userId))
             
