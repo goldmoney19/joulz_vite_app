@@ -10,7 +10,7 @@ import {create, getAllPortfolio, getPortfolioById, deletePortfolioById, updatePo
 
 
 portf.post("/portfolio", create);
-portf.get("/portfolios", authMiddleware, restrictTo("admin"), getAllPortfolio);
+portf.get("/portfolios", getAllPortfolio);
 portf.get("/portfolio/:id", getPortfolioById);
 portf.delete("/delete/portfolio/:id", deletePortfolioById);
 portf.put("/update/portfolio/:id", updatePortfolioByid);
