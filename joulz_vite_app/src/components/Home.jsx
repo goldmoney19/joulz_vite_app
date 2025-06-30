@@ -4,7 +4,7 @@ import WeOffer from './WeOffer.jsx'
 import Shop from './Shop.jsx'
 import Portfolio from '../../../server/model/Portfolio'
 import PortfolioDisplay from './PortfolioDisplay.jsx'
-import Footer from './Footerjsx'
+import Footer from './Footer.jsx'
 import AboutDisplay from './AboutDisplay.jsx'
 import WhyChoose from './WhyChoose.jsx'
 
