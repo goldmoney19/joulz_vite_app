@@ -19,7 +19,7 @@ function PortfolioDisplay() {
                         const fetchData = async(req, res) => {
         
                         try{
-                 const response = await axios.get("http://localhost:8000/portDisp/portfolio_display" )
+                 const response = await axios.get("https://joulz-backend.onrender.com/portDisp/portfolio_display" )
                   setProducts(response.data);
          
                            }
