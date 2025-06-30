@@ -1,5 +1,5 @@
 import React from 'react'
-import Karuzel from './karuzel.jsx'
+import Karuzel from './Karuzel.jsx'
 import WeOffer from './WeOffer'
 import Shop from './Shop'
 
