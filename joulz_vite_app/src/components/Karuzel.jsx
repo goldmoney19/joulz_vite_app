@@ -86,7 +86,7 @@ function Karuzel() {
         <Carousel.Caption className='karuzelCaption caption_cover'>
           <p className="caption_text1">Joulz Apparel</p>
           <p className="caption_text2">
-          Specialist in Bespoke, Kitchens, Furniture & Joinery.
+          Specialist in Bespoke, Kitchens, Furniture , Joinery.
           </p>
            <div className="hero">
         <a href=""><button className="btn btn-outline-light portfolio_btn">portfolio</button></a>
