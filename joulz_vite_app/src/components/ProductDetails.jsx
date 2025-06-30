@@ -46,6 +46,8 @@ const ProductDetails = () => {
                     fetchUsers();
                }, [id]);
  const navigate = useNavigate();
+
+
        function handleAddToCart(prodId){
             const user_id = localStorage.getItem("user-id");
          const produktId = prodId;
@@ -66,7 +68,7 @@ const ProductDetails = () => {
                   
                   })
                   .catch((error)=>{
-
+                toast.error("Signup or Login to Add Cart");
                      console.log(error)
                   })
        }

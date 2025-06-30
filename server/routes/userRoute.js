@@ -5,7 +5,7 @@ import authMiddleware from "../utils/authMiddleware.js";
 import { restrictTo } from "../services/restrictTo.js";
 
 
-import {create, getAllUsers, getUserById,updateUserByid, deleteUserById, login, addToCart, getUserCart} from "../controller/userController.js"
+import {create, getAllUsers, getUserById,updateUserByid, deleteUserById, login, addToCart, getUserCart, deleteSingleCart} from "../controller/userController.js"
 
 const route = express.Router();
 
@@ -17,7 +17,7 @@ route.put("/update/user/:id", updateUserByid);
 route.post("/login", login);
 route.post("/add_To_Cart", addToCart);
 route.post("/get_user_cart", getUserCart);
-
+route.post("/cart/delete", deleteSingleCart);
 
 
 

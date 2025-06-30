@@ -3,8 +3,12 @@ import {useState , useEffect} from 'react'
 import axios from 'axios';
 import {Container, Row, Col, Nav} from 'react-bootstrap'
 import Footer from './Footer';
+import { useNavigate } from 'react-router-dom';
 
 
+import Cookies from "cookie-universal"
+
+const cookies = new Cookies();
 
 const UserCart = () =>{
 
@@ -15,13 +19,14 @@ const UserCart = () =>{
       
                
      useEffect(()=>{
+      const  user = localStorage.getItem('user-id');
         const userDataa = {user_id:localStorage.getItem('user-id')}
          const fetchUsers = async() => {
                   try{    
         const response = await axios.post('http://localhost:8000/api/get_user_cart' , userDataa)
    
                   const result = response.data.cart;
-                             console.log(result); 
+                            //  console.log(result); 
                            setBart(result)
          }
          catch(error){
@@ -48,6 +53,29 @@ const UserCart = () =>{
 
    }, 0).toFixed(2);
 
+const navigate = useNavigate();
+   const handleDeleteCart = async(product_id) =>{
+    
+try{
+         const user = localStorage.getItem('user-id');
+         const userr = user;
+
+        const response = await axios.post("http://localhost:8000/api/cart/delete",{product_id,userr});
+          
+        console.log(response.data.cart)
+        setBart(response.data.cart);
+        
+        //   if(response.data && Array.isArray((await response).data.cart)){
+        // setBart(response.data.cart);
+        //   }else{
+        //     console.log('invalid cart response');
+        //   }
+}catch(error){
+console.log(error.response?.data);
+  
+}
+   }
+
                return ( 
                  <div> 
                   <Container className='userCart_row'>
@@ -59,27 +87,34 @@ const UserCart = () =>{
                      isLoading ? (
                      <div>loading...</div>
                    ):(
-                       
-                    bart.map((item, index) =>(<>
-                         <Col key = {item.id} sm = {6} className='userCart_image'>
+
+                    <table>
+                      <thead>
+                        <tr>
+                          <td>image </td>
+                           <td>title </td>
+                            <td>price </td>
+                             <td>quantity </td>
+                              <td>total</td>
+                               <td>delete </td>
+                        </tr>
+                      </thead>
+                       <tbody>
+  {bart.map((item, index) =>(<>
+                        <tr>
+                           <td>
                            <img style={{height: '70px', width: '70px'}}  src = 
-{`http://localhost:8000/${item.productId?.image}`}></img>
-                           </Col>
-
-                       <Col  key = {item.id} sm = {6} className='userCart_discCover'>
-                               <div key ={index}>
-                    
-                              <span className='userCart_title'>  {item.productId?.title} </span>
-
-                <span className='userCart_price'>$ {item.productId?.price}</span>  
-                       <span className='userCart_qtyText'></span>  <span className='userCart_qtyNum'>{item.quantity} item(s)</span>
-                         
-                         <span className='userCart_subtotal'>Total: ${(item.productId.price * item.quantity).toFixed(2)}</span>
-                         
-                               </div>
-                           </Col>
-                          
-                               </>))
+{`http://localhost:8000/${item.productId?.image}`}></img></td>
+                                       <td>{item.productId?.title}</td>
+                                       <td>{item.productId?.price}</td>
+                                      <td>{item.quantity}</td>
+                                        <td>${(item.productId.price * item.quantity).toFixed(2)}</td>
+                                         
+                                     <td><button className='btn btn-sm btn-danger' onClick={()=>handleDeleteCart(item.productId._id)}>delete</button></td>
+                          </tr>
+                   </>))}
+                               </tbody>
+                               </table>
                    )
 
 
@@ -109,9 +144,9 @@ const UserCart = () =>{
                                 <Col sm={12}>
                                     
 
-                            <button className='btn btn-warning btn-sm' style={{marginRight:'90px'}}><Nav.Link href ="/checkout" className='btn btn-secondary'>proceed to checkout</Nav.Link></button>
+                            <button className='btn btn-outline-warning btn-sm' style={{marginRight:'90px', color:'black'}}><Nav.Link href ="/checkout" >Checkout</Nav.Link></button>
          
-                   <button className='btn btn-dark btn-sm'><Nav.Link href ="/shop" className='btn btn-secondary'>continue to shop</Nav.Link></button>
+                   <button className='btn btn-outline-success btn-sm' style = {{color:'black'}}><Nav.Link href ="/shop" >continue to shop</Nav.Link></button>
                                 </Col>
                               
                             </Row>

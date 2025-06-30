@@ -183,10 +183,9 @@ try{
 
    console.log(userr);
 
-   if(userr){
-    console.log("user is present")
-   }else{
-      console.log("user is not present")
+   if(!userr){
+    console.log("user not present");
+    res.status(400).json({'message':'user not present'});
    }
          userr.cart.push({productId, quantity:quantity || 1});
          await userr.save();
@@ -220,3 +219,33 @@ console.log(error);
   }
 }
 
+
+
+export const deleteSingleCart = async(req, res) => {
+
+                  try { 
+                     const {userr, product_id } = req.body;
+                  
+
+                
+                //  console.log(userr);      
+
+              const user =await User.findById(userr);
+              
+
+            // console.log(user?.cart);
+            //   console.log(product_id);
+
+            user.cart = user.cart.filter(item => item.productId.toString() !== product_id);
+              await user.save();
+                
+              const carta =  await user.populate('cart.productId');
+              console.log(carta.cart)
+              res.status(200).json({cart:carta.cart});
+                
+                }catch(error){
+
+console.log(error);
+                }
+
+}

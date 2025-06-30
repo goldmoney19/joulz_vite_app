@@ -29,6 +29,185 @@ height:500px;
  font-family: 'EB Garamond',serif;
 }
 
+
+.link_cover{
+     border: none;
+    margin-top:30px;
+    animation-name:linkss;
+    animation-duration:2s;
+}
+
+ .link_btnn img{
+    border: none;
+      height:30px;
+      width:30px;
+      filter:brightness(95%);
+  }
+
+
+.hero .portfolio_btn{
+
+border:none;
+    animation-name:portfoli_o;
+    animation-duration:2.2s;
+}
+
+@keyframes portfoli_o{
+
+    0%{
+        opacity:0;
+        transform:translateX(-35px);
+    }
+    100%{
+
+        opacity:1;
+       
+ transform:translate(0px);
+    }
+}
+
+
+.hero .shop_btn{
+
+    animation-name:sho_p;
+    animation-duration:2.5s;
+}
+
+@keyframes sho_p{
+
+    0%{
+        opacity:0px;   transform:translateX(30px);
+    }
+
+    100%{
+
+        opacity:1;
+transform:translateX(0px);
+    }
+}
+
+@keyframes linkss{
+
+  0%{
+      opacity:0;
+      transform:translateY(30px);
+  }
+
+  100%{
+      opacity:1;
+      transform:translateY(0px);
+  }
+}
+
+
+
+.caption_cover{
+border-radius: 15px;
+height:450px;
+border:none ;
+width: 60%;
+margin:auto;
+border:none;
+
+}
+
+.caption_cover p.caption_text1{
+font-weight: bold;
+font-size: 20px;
+}
+
+
+
+.caption_cover p.caption_text1{
+ 
+animation-name:rider1 ;
+  animation-duration:2s;
+
+z-index:1 ;
+}
+
+
+
+
+
+@keyframes rider1{
+
+0%{transform:none;
+
+   opacity: 0; color:lightgrey;
+}
+
+
+50%{
+          
+          opacity: 0;color: white;
+
+  }
+
+
+
+  100%{
+          
+          opacity: 1;color: white;
+
+  }
+}
+
+
+
+
+.caption_cover p.caption_text2{
+font-size: 29px;
+padding-top:0px;
+}
+
+
+
+.caption_cover p.caption_text2{
+ 
+animation-name:rider;
+  animation-duration:2s;
+
+z-index:1 ;
+min-height:50px;
+}
+
+
+
+
+
+@keyframes rider{
+
+0%{transform:translateY(300px);
+
+   opacity: 0; color:lightgrey;
+}
+
+50%{
+
+ transform:translateY(100px);
+          opacity: 0;color: white;
+
+}
+
+
+75%{
+
+ transform:translatey(100px);
+          opacity: 0;color: white;
+
+}
+
+  100%{
+          transform:translateX(0px);
+          opacity: 1;color: white;
+
+  }
+}
+
+
+
+
 .portfolio_con{
 
   border: none;
@@ -456,6 +635,115 @@ margin-bottom: 70px;
 
 width: 150px;
 }
+
+
+
+.caption_cover{
+border-radius: 15px;
+height:450px;
+border:none ;
+width: 65%;
+margin:auto;
+border:none;
+
+}
+
+.caption_cover p.caption_text1{
+font-weight: bold;
+font-size: 20px;
+}
+
+
+
+.caption_cover p.caption_text1{
+ 
+animation-name:rider1 ;
+  animation-duration:2s;
+
+z-index:1 ;
+}
+
+
+
+
+
+@keyframes rider1{
+
+0%{transform:none;
+
+   opacity: 0; color:lightgrey;
+}
+
+
+50%{
+          
+          opacity: 0;color: white;
+
+  }
+
+
+
+  100%{
+          
+          opacity: 1;color: white;
+
+  }
+}
+
+
+
+
+.caption_cover p.caption_text2{
+font-size: 17px;
+padding-top:0px;
+}
+
+
+
+.caption_cover p.caption_text2{
+ 
+animation-name:rider;
+  animation-duration:2s;
+
+z-index:1 ;
+min-height:50px;
+}
+
+
+
+
+
+@keyframes rider{
+
+0%{transform:translateY(300px);
+
+   opacity: 0; color:lightgrey;
+}
+
+50%{
+
+ transform:translateY(100px);
+          opacity: 0;color: white;
+
+}
+
+
+75%{
+
+ transform:translatey(100px);
+          opacity: 0;color: white;
+
+}
+
+  100%{
+          transform:translateX(0px);
+          opacity: 1;color: white;
+
+  }
+}
+
+
+
 
   .App{
 
