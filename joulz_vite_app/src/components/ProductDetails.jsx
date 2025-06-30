@@ -92,7 +92,7 @@ const ProductDetails = () => {
 
                     {penthause?.multipleImages?.map((img, index) => (
                  <Col sm = {3} key ={index} >
-     <span><img  style={{height: '90px', width: '130px',float:'left',marginTop:'40px'}}  src = {`http://localhost:8000/${img}`}></img></span>
+     <span><img  style={{height: '90px', width: '130px',float:'left',marginTop:'40px'}}  src = {`https://joulz-backend.onrender.com/${img}`}></img></span>
                  </Col>
             ))}
                   
