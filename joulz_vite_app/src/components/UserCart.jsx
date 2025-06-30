@@ -23,7 +23,7 @@ const UserCart = () =>{
         const userDataa = {user_id:localStorage.getItem('user-id')}
          const fetchUsers = async() => {
                   try{    
-        const response = await axios.post('http://localhost:8000/api/get_user_cart' , userDataa)
+        const response = await axios.post('https://joulz-backend.onrender.com/api/get_user_cart' , userDataa)
    
                   const result = response.data.cart;
                             //  console.log(result); 
@@ -60,7 +60,7 @@ try{
          const user = localStorage.getItem('user-id');
          const userr = user;
 
-        const response = await axios.post("http://localhost:8000/api/cart/delete",{product_id,userr});
+        const response = await axios.post("https://joulz-backend.onrender.com/api/cart/delete",{product_id,userr});
           
         console.log(response.data.cart)
         setBart(response.data.cart);
