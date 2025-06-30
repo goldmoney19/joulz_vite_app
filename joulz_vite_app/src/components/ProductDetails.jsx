@@ -32,7 +32,7 @@ const ProductDetails = () => {
    useEffect(()=>{
      const fetchUsers = async() => {
                     try{
-            const response = await axios.get(`http://localhost:8000/api/product/${id} `);
+            const response = await axios.get(`https://joulz-backend.onrender.com/api/product/${id} `);
 
                const result = await response.data;
                              console.log(result); 
