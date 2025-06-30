@@ -58,7 +58,7 @@ for(let pair of formData.entries()){
 
                    
                    
-                   await axios.post("http://localhost:8000/api/product", formData)
+                   await axios.post("https://joulz-backend.onrender.com/api/product", formData)
                   .then((response)=>{
                      console.log("product inserted");
                     navigate("/viewProducts");
