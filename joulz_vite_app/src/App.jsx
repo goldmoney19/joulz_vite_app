@@ -1,7 +1,7 @@
 import './App.css'
 import Home from './components/Home'
 import Navvbar from './components/Navvbar'
-import PortfolioDisplay from './components/PortfolioDisplay'
+
 import About from './components/About'
 import Contact from './components/Contact'
 import Person from './components/Person'
