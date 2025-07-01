@@ -15,7 +15,8 @@ function About(){
    
              return <> 
       <div >
-        <Container fluid className='aboutPage_con'>
+       
+       <Container fluid className='aboutPage_con'>
           
  <h3>Founder's Message</h3><br></br>
           <Row className='mx-auto about_pageCover'> 
