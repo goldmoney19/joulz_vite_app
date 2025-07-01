@@ -28,6 +28,12 @@ dotenv.config();
 
 app.use('/uploads', express.static(path.join(__dirname, 'Uploads')));
 
+app.use(express.static(path.join(__dirname, 'dist')));
+
+// Handle all routes by serving index.html
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, 'dist', 'index.html'));
+});
 
 const PORT = process.env.PORT || 7000;
 const MONGOURL = process.env.MONGO_URL;

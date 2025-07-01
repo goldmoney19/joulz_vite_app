@@ -13,7 +13,7 @@ const imagg1 = image1;
 
 function About(){
    
-             return < > 
+             return <> 
       <div >
         <Container fluid className='aboutPage_con'>
           
