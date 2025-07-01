@@ -1,12 +1,12 @@
 import React from 'react'
-import Karuzel from './karuzel.jsx'
-import WeOffer from './WeOffer'
-import Shop from './Shop'
+import Karuzel from './Karuzel.jsx'
+import WeOffer from './WeOffer.jsx'
+import Shop from './Shop.jsx'
 
-import PortfolioDisplay from './PortfolioDisplay'
-import Footer from './Footer'
-import AboutDisplay from './AboutDisplay'
-import WhyChoose from './WhyChoose'
+import PortfolioDisplay from './PortfolioDisplay.jsx'
+import Footer from './Footer.jsx'
+import AboutDisplay from './AboutDisplay.jsx'
+import WhyChoose from './WhyChoose.jsx'
 
 
 
