@@ -15,15 +15,8 @@ function About(){
    
              return <> 
       <div >
-         {
-         useEffect(() => {
-    // Ensure no errors here
-    console.log('About page mounted');
-  }, []);
-
-  return <div>About Page</div>;
-         }
-{/*         <Container fluid className='aboutPage_con'>
+       
+       <Container fluid className='aboutPage_con'>
           
  <h3>Founder's Message</h3><br></br>
           <Row className='mx-auto about_pageCover'> 
@@ -104,7 +97,7 @@ new benchmarks in bespoke interior solutions.</li>
        
 
 
- */}
+
         </div>
           </>
      
