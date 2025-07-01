@@ -12,7 +12,7 @@ import React from 'react'
 // const imagg1 = image1;
 
 function About(){
-   
+   console.log("about page");
              return <> 
       <div>
        <p>helo guys</p>
