@@ -1,7 +1,10 @@
 import React from 'react'
 import Karuzel from './Karuzel.jsx'
+
 import WeOffer from './WeOffer.jsx'
 import Shop from './Shop.jsx'
+
+
 
 import PortfolioDisplay from './PortfolioDisplay.jsx'
 import Footer from './Footer.jsx'
