@@ -1,5 +1,5 @@
 import React from 'react'
-import Karuzel from './Karuzel'
+import Karuzel from './karuzel'
 import WeOffer from './WeOffer'
 import Shop from './Shop'
 import Portfolio from '../../../server/model/Portfolio'

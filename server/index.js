@@ -31,15 +31,15 @@ app.use('/uploads', express.static(path.join(__dirname, 'Uploads')));
 
 const PORT = process.env.PORT || 7000;
 const MONGOURL = process.env.MONGO_URL;
-const HOST = process.env.HOST;
+
 mongoose
      .connect(MONGOURL)
      .then(()=> {
 
         console.log("db connected successfully")
-        app.listen(PORT,HOST, () => {
+        app.listen(PORT, () => {
 
-            console.log(`server is running on port:${HOST}:${PORT}`)
+            console.log(`server is running on port:${PORT}`)
         });
      })
      .catch((error) => console.log(error));
