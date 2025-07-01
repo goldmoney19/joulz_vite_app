@@ -20,7 +20,7 @@ function OrderConfirmation(){
 
 const handlePayment = async() =>{
 try{
-   const response = await axios.post('http://localhost:8000/api/payment/initialize', {
+   const response = await axios.post('https://joulz-backend.onrender.com/api/payment/initialize', {
 
         email:email,
         amount:order.totalPrice,

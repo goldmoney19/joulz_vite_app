@@ -10,7 +10,7 @@ import {create, getAllUsers, getUserById,updateUserByid, deleteUserById, login, 
 const route = express.Router();
 
 route.post("/user", create);
-route.get("/users",authMiddleware , restrictTo("admin"), getAllUsers);
+route.get("/users",authMiddleware ,  getAllUsers);
 route.get("/user/:id", getUserById);
 route.delete("/delete/user/:id", deleteUserById);
 route.put("/update/user/:id", updateUserByid);

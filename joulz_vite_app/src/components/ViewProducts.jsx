@@ -28,7 +28,7 @@ function ViewProducts(){
                 const fetchData = async(req, res) => {
 
                 try{
-         const response = await axios.get("http://localhost:8000/api/products" , {
+         const response = await axios.get("https://joulz-backend.onrender.com/api/products" , {
                 headers:{
                           Authorization:`Bearer ${token}`
 
@@ -48,7 +48,7 @@ fetchData();
              },[]);
      
              const deleteProductById = async (userId) => {
-                     await axios.delete(`http://localhost:8000/api/delete/product/${userId}`)
+                     await axios.delete(`https://joulz-backend.onrender.com/api/delete/product/${userId}`)
                     .then((response) => {
                     setProducts((prevUser)=>prevUser.filter((user)=>user._id !==userId))
             
@@ -135,7 +135,7 @@ fetchData();
               <td>{prodts.category}</td>
                <td>{prodts.keyword}</td>
                
-              <td><img style={{height: '30px', width: '30px'}}  src = {`http://localhost:8000/${prodts?.image}`}></img></td>
+              <td><img style={{height: '30px', width: '30px'}}  src = {`https://joulz-backend.onrender.com/${prodts?.image}`}></img></td>
               {/* {console.log(`http://localhost:8000/${prodts?.image}`)} */}
               <td className='btn btn-warning btn-sm'> <Nav.Link href ={`/update_product/` +prodts._id} type='button'>edit</Nav.Link></td>
           <td className='btn btn-danger btn-sm'> <Nav.Link  onClick = {()=>deleteProductById(prodts._id)}>delete</Nav.Link></td>

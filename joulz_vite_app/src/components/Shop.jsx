@@ -19,7 +19,7 @@ function Shop() {
                         const fetchData = async(req, res) => {
         
                         try{
-                 const response = await axios.get("http://localhost:8000/shops/shops" )
+                 const response = await axios.get("https://joulz-backend.onrender.com/shops/shops" )
                   setProducts(response.data);
          
                            }
@@ -59,7 +59,7 @@ function Shop() {
                    products.map((item, index) => (
                     <Col  key = {index}  xs = {6} sm={3} >
                     <div >
-                       <Nav.Link href ={`/productDetails/` +item._id} type='button'><img  style={{height: '150px', width: '150px'}}  src = {`http://localhost:8000/${item?.image}`}
+                       <Nav.Link href ={`/productDetails/` +item._id} type='button'><img  style={{height: '150px', width: '150px'}}  src = {`https://joulz-backend.onrender.com/${item?.image}`}
                        /></Nav.Link>
                       <p  className='shop_text4'>{item.title}</p>
                         <p  className='shop_text3'>{item.smallDescription}</p>

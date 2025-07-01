@@ -29,7 +29,7 @@ console.log(formData);
 
                     const portf = {email , password}
                    
-                   await axios.post("http://localhost:8000/api/user", formData)
+                   await axios.post("https://joulz-backend.onrender.com/api/user", formData)
                   .then((response)=>{
                      console.log("user inserted");
                     toast.success(response.data.message, {position:"top-right"});

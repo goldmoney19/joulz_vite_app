@@ -1,7 +1,7 @@
 import './App.css'
 import Home from './components/Home'
 import Navvbar from './components/Navvbar'
-import Portfolio from './components/PortfolioDisplay'
+
 import About from './components/About'
 import Contact from './components/Contact'
 import Person from './components/Person'
@@ -11,7 +11,7 @@ import UpdateePortfolio from './components/UpdateePortfolio'
 import Register from './components/Register'
 import Login from './components/Login'
 import InsertProduct from './components/InsertProduct'
-import ViewProducts from './components/viewProducts'
+import ViewProducts from './components/ViewProducts'
 import ProductDetails from './components/ProductDetails'
 import Shop from './components/Shop'
 import UserCart from './components/UserCart'
@@ -53,7 +53,7 @@ function App() {
    <Route path = "/about" element = {<About />} />
    
 
-   <Route path = "/portfolio" element = {<Portfolio />} />
+
    
 
    <Route path = "/insertPortfolio" element = {
@@ -89,9 +89,9 @@ function App() {
 } />
 
 <Route path = "/viewProducts" element = {
-  <ProtectedAdminRoute allowedRoles={'admin'}>
+  
   <ViewProducts />
-</ProtectedAdminRoute>
+
 } />
 
  <Route path = "/login" element = {<Login />} />

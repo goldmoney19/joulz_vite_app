@@ -27,7 +27,7 @@ function Checkout(props){
  useEffect(() => {
 
               const userDataa = {user_id:localStorage.getItem('user-id')}
-                         axios.post("http://localhost:8000/api/get_user_cart", userDataa)
+                         axios.post("https://joulz-backend.onrender.com/api/get_user_cart", userDataa)
                          .then((response)=>{
                           console.log(response)
                           setFormData(response.data.cart)
@@ -57,7 +57,7 @@ const user_id = localStorage.getItem("user-id");
 
   
     
- const response = await axios.post("http://localhost:8000/check/check_out", _data)
+ const response = await axios.post("https://joulz-backend.onrender.com/check/check_out", _data)
    .then((response)=>{
 
        
@@ -163,7 +163,7 @@ const user_id = localStorage.getItem("user-id");
                                     <tr key ={index}>
              <td style={{fontSize: '13px'}}> {item.productId?.title}</td>
              <td><img style={{height: '50px', width: '50px'}}  src = 
-       {`http://localhost:8000/${item.productId?.image}`}></img></td>
+       {`https://joulz-backend.onrender.com/${item.productId?.image}`}></img></td>
        <td style={{fontSize: '13px', fontWeight:"normal"}}>$ {item.productId?.price}</td>
     <td  style={{fontSize: '13px', fontWeight:"normal"}}>{item.quantity}</td>
  <td>${(item.productId.price * item.quantity).toFixed(2)}</td>

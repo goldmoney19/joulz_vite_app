@@ -42,7 +42,7 @@ console.log(multipleImages);
 
                   
                    
-                   await axios.post("http://localhost:8000/api/portfolio", formData)
+                   await axios.post("https://joulz-backend.onrender.com/api/portfolio", formData)
                   .then((response)=>{
                      console.log("portfolio inserted");
                      navigate("/person");

@@ -1,8 +1,8 @@
 import React from 'react'
-import Karuzel from './karuzel'
+import Karuzel from './karuzel.jsx'
 import WeOffer from './WeOffer'
 import Shop from './Shop'
-import Portfolio from '../../../server/model/Portfolio'
+
 import PortfolioDisplay from './PortfolioDisplay'
 import Footer from './Footer'
 import AboutDisplay from './AboutDisplay'
