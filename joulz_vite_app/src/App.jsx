@@ -1,44 +1,47 @@
-import './App.css'
-import Home from './components/Home'
-import Navvbar from './components/Navvbar'
+import React from 'react'
+// import './App.css'
+// import Home from './components/Home'
+// import Navvbar from './components/Navvbar'
 
-import About from './components/About'
-import Contact from './components/Contact'
-import Person from './components/Person'
-import ViewUsers from './components/ViewUsers'
-import InsertPortfolio from './components/InsertPortfolio'
-import UpdateePortfolio from './components/UpdateePortfolio'
-import Register from './components/Register'
-import Login from './components/Login'
-import InsertProduct from './components/InsertProduct'
-import ViewProducts from './components/ViewProducts'
-import ProductDetails from './components/ProductDetails'
-import Shop from './components/Shop'
-import UserCart from './components/UserCart'
-import Checkout from './components/Checkout'
-import OrderConfirmation from './components/OrderConfirmation'
-import ProfilePage from './components/ProfilePage'
-import AdminDashboard from './components/AdminDashboard'
-import PaymentSuccess from './components/PaymentSuccess'
-import WeOffer from './components/WeOffer'
-import PortfolioDisplay from './components/PortfolioDisplay'
-import Footer from './components/Footer'
-import AboutDisplay from './components/AboutDisplay'
-import WhyChoose from './components/WhyChoose'
-import ProtectedAdminRoute from './components/ProtectedAdminRoute'
-import Unauthorized from './components/Unauthorized'
-import UpdateProduct from './components/UpdateProduct'
+// import About from './components/About'
+// import Contact from './components/Contact'
+// import Person from './components/Person'
+// import ViewUsers from './components/ViewUsers'
+// import InsertPortfolio from './components/InsertPortfolio'
+// import UpdateePortfolio from './components/UpdateePortfolio'
+// import Register from './components/Register'
+// import Login from './components/Login'
+// import InsertProduct from './components/InsertProduct'
+// import ViewProducts from './components/ViewProducts'
+// import ProductDetails from './components/ProductDetails'
+// import Shop from './components/Shop'
+// import UserCart from './components/UserCart'
+// import Checkout from './components/Checkout'
+// import OrderConfirmation from './components/OrderConfirmation'
+// import ProfilePage from './components/ProfilePage'
+// import AdminDashboard from './components/AdminDashboard'
+// import PaymentSuccess from './components/PaymentSuccess'
+// import WeOffer from './components/WeOffer'
+// import PortfolioDisplay from './components/PortfolioDisplay'
+// import Footer from './components/Footer'
+// import AboutDisplay from './components/AboutDisplay'
+// import WhyChoose from './components/WhyChoose'
+// import ProtectedAdminRoute from './components/ProtectedAdminRoute'
+// import Unauthorized from './components/Unauthorized'
+// import UpdateProduct from './components/UpdateProduct'
 
 
 
-import {BrowserRouter, Routes, Route} from 'react-router-dom'
+// import {BrowserRouter, Routes, Route} from 'react-router-dom'
 
 function App() {
  
+   console.log("App component is rendering!");
 
   return (
     <>
-      <div>
+    <p>hello coder</p>
+      {/* <div>
         <BrowserRouter>
    <Navvbar />
   <Routes>
@@ -150,7 +153,7 @@ function App() {
    </Routes>
    </BrowserRouter>
     
-      </div>
+      </div> */}
      
     </>
   )
