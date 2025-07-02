@@ -32,7 +32,7 @@ const ProductDetails = () => {
    useEffect(()=>{
      const fetchUsers = async() => {
                     try{
-            const response = await axios.get(`https://joulz-backend.onrender.com/api/product/${id} `);
+            const response = await axios.get(`import.meta.env.VITE_APP_API_URL/api/product/${id} `);
 
                const result = await response.data;
                              console.log(result); 
@@ -58,7 +58,7 @@ const ProductDetails = () => {
                   
          const _data = {productId:produktId,quantity, user_id}
             
-         axios.post("https://joulz-backend.onrender.com/api/add_To_cart" , _data)
+         axios.post("import.meta.env.VITE_APP_API_URL/api/add_To_cart" , _data)
 
           .then(response=>{
                      console.log(response.data);
