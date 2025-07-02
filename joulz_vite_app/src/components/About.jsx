@@ -15,7 +15,7 @@ function About(){
    console.log("about page");
              return <> 
       <div>
-       <p>helo guys</p>
+     
        <Container fluid className='aboutPage_con'>
           
  <h3>Founder's Message</h3><br></br>
