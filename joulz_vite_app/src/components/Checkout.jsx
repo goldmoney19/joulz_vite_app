@@ -57,7 +57,7 @@ const user_id = localStorage.getItem("user-id");
 
   
     
- const response = await axios.post("https://joulz-backend.onrender.com/check/check_out", _data)
+ const response = await axios.post("import.meta.env.VITE_APP_API_URL/check/check_out", _data)
    .then((response)=>{
 
        
