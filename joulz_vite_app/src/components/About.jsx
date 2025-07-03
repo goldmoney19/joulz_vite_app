@@ -1,22 +1,22 @@
-import '../App.css'
+// import '../App.css'
 import React from 'react'
-import {Container, Row, Col,Nav, Navbar,NavLink,Button} from 'react-bootstrap'
-import image3 from '../assets/uju2.jpg'
-import image2 from '../assets/mission.jpeg'
-import image1 from '../assets/vision.png'
-import Footer from './Footer'
+// import {Container, Row, Col,Nav, Navbar,NavLink,Button} from 'react-bootstrap'
+// import image3 from '../assets/uju2.jpg'
+// import image2 from '../assets/mission.jpeg'
+// import image1 from '../assets/vision.png'
+// import Footer from './Footer'
 
 
-const imagg3 = image3;
-const imagg2 = image2;
-const imagg1 = image1;
+// const imagg3 = image3;
+// const imagg2 = image2;
+// const imagg1 = image1;
 
 function About(){
-   
+   console.log("about page");
              return <> 
-      <div >
-       
-       <Container fluid className='aboutPage_con'>
+      <div>
+       <p>helo guys</p>
+{/*        <Container fluid className='aboutPage_con'>
           
  <h3>Founder's Message</h3><br></br>
           <Row className='mx-auto about_pageCover'> 
@@ -93,7 +93,7 @@ new benchmarks in bespoke interior solutions.</li>
   <Footer />
   </Col>
 </Row>
-        </Container>
+        </Container> */}
        
 
 
