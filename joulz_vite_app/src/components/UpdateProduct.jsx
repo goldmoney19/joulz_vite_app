@@ -31,7 +31,7 @@ function UpdateProduct(props){
       }
 
  useEffect(() => {
-                         axios.get(`https://joulz-backend.onrender.com/api/product/${id}`)
+                         axios.get(`import.meta.env.VITE_APP_API_URL/api/product/${id}`)
                          .then((response)=>{
                           console.log(response)
                           setFormData(response.data)
@@ -49,7 +49,7 @@ function UpdateProduct(props){
                    e.preventDefault();
 
                 
-                   await axios.put(`https://joulz-backend.onrender.com/api/update/product/${id}`, formData)
+                   await axios.put(`import.meta.env.VITE_APP_API_URL/api/update/product/${id}`, formData)
                   .then((response)=>{
                      console.log("product inserted");
                      navigate("/viewProducts");

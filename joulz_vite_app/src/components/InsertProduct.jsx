@@ -58,7 +58,7 @@ for(let pair of formData.entries()){
 
                    
                    
-                   await axios.post("https://joulz-backend.onrender.com/api/product", formData)
+                   await axios.post("import.meta.env.VITE_APP_API_URL/api/product", formData)
                   .then((response)=>{
                      console.log("product inserted");
                     navigate("/viewProducts");

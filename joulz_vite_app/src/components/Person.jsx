@@ -30,7 +30,7 @@ const navigate = useNavigate();
                 const fetchData = async(req, res) => {
 
                 try{
-         const response = await axios.get("https://joulz-backend.onrender.com/api/portfolios" , {
+         const response = await axios.get("import.meta.env.VITE_APP_API_URL/api/portfolios" , {
                 headers:{
                           Authorization:`Bearer ${token}`
 
@@ -50,7 +50,7 @@ fetchData();
 
 
    const deletePortfolio = async (userId) => {
-         await axios.delete(`https://joulz-backend.onrender.com/api/delete/portfolio/${userId}`)
+         await axios.delete(`import.meta.env.VITE_APP_API_URL/api/delete/portfolio/${userId}`)
         .then((response) => {
         setPortfolio((prevUser)=>prevUser.filter((user)=>user._id !==userId))
 

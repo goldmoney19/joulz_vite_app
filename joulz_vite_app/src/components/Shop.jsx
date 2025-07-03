@@ -19,7 +19,7 @@ function Shop() {
                         const fetchData = async(req, res) => {
         
                         try{
-                 const response = await axios.get("https://joulz-backend.onrender.com/shops/shops" )
+                 const response = await axios.get("import.meta.env.VITE_APP_API_URL/shops/shops" )
                   setProducts(response.data);
          
                            }
