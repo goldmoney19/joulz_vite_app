@@ -32,7 +32,7 @@ const ProductDetails = () => {
    useEffect(()=>{
      const fetchUsers = async() => {
                     try{
-            const response = await axios.get(`https://joulz-vite-app-backend.onrender.com/api/product/${id} `);
+            const response = await axios.get(`https://joulz-vite-app-backend.onrender.com/api/product/${id}`);
 
                const result = await response.data;
                              console.log(result); 
@@ -58,7 +58,7 @@ const ProductDetails = () => {
                   
          const _data = {productId:produktId,quantity, user_id}
             
-         axios.post("import.meta.env.VITE_APP_API_URL/api/add_To_cart" , _data)
+         axios.post("https://joulz-vite-app-backend.onrender.com/add_To_cart" , _data)
 
           .then(response=>{
                      console.log(response.data);
@@ -84,7 +84,7 @@ const ProductDetails = () => {
                    {
                    <>
                    <Col key = {penthause.id} sm = {10}  >
-                    <img  style={{height: '400px', width: '100%'}}  src = {`http://localhost:8000/${penthause?.image}`}
+                    <img  style={{height: '400px', width: '100%'}}  src = {`https://joulz-vite-app-backend.onrender.com/${penthause?.image}`}
                        />
 
                    </Col>
@@ -92,7 +92,7 @@ const ProductDetails = () => {
 
                     {penthause?.multipleImages?.map((img, index) => (
                  <Col sm = {3} key ={index} >
-     <span><img  style={{height: '90px', width: '130px',float:'left',marginTop:'40px'}}  src = {`https://joulz-backend.onrender.com/${img}`}></img></span>
+     <span><img  style={{height: '90px', width: '130px',float:'left',marginTop:'40px'}}  src = {`https://joulz-vite-app-backend.onrender.com/${img}`}></img></span>
                  </Col>
             ))}
                   
