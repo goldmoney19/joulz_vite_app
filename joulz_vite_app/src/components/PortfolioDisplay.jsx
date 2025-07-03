@@ -19,7 +19,7 @@ function PortfolioDisplay() {
                         const fetchData = async(req, res) => {
         
                         try{
-                 const response = await axios.get("import.meta.env.VITE_APP_API_URL/portDisp/portfolio_display" )
+                 const response = await axios.get("https://joulz-vite-app-backend.onrender.com/portDisp/portfolio_display" )
                   setProducts(response.data);
          
                            }
