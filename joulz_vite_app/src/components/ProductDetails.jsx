@@ -32,7 +32,7 @@ const ProductDetails = () => {
    useEffect(()=>{
      const fetchUsers = async() => {
                     try{
-            const response = await axios.get(`import.meta.env.VITE_APP_API_URL/api/product/${id} `);
+            const response = await axios.get(`https://joulz-vite-app-backend.onrender.com/api/product/${id} `);
 
                const result = await response.data;
                              console.log(result); 
