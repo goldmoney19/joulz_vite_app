@@ -19,11 +19,10 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 const corsOptions = {
-  origin: 'https://vercel.com/g-coder/joulz-vite-app', 
-  optionsSuccessStatus: 200
+  origin: 'https://vercel.com/g-coder/joulz-vite-app', // <-- Replace with your actual Vercel frontend URL
+  optionsSuccessStatus: 200 // Some legacy browsers (IE11, various SmartTVs) choke on 204
 };
 app.use(cors(corsOptions));
-
 
 const app = express();
 app.use(bodyParser.json());
@@ -39,7 +38,6 @@ app.use(express.static(path.join(__dirname, 'dist')));
 // app.get('*', (req, res) => {
 //   res.sendFile(path.join(__dirname, 'dist', 'index.html'));
 // });
-
 
 
 const PORT = process.env.PORT || 7000;
