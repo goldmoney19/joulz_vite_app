@@ -42,7 +42,7 @@ console.log(multipleImages);
 
                   
                    
-                   await axios.post("import.meta.env.VITE_APP_API_URL/api/portfolio", formData)
+                   await axios.post("https://joulz-vite-app-backend.onrender.com/api/portfolio", formData)
                   .then((response)=>{
                      console.log("portfolio inserted");
                      navigate("/person");
