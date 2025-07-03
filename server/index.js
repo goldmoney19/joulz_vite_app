@@ -35,6 +35,8 @@ app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, 'dist', 'index.html'));
 });
 
+if (process.env.NODE_ENV !== "production") {
+
 const PORT = process.env.PORT || 7000;
 const MONGOURL = process.env.MONGO_URL;
 
@@ -49,7 +51,7 @@ mongoose
         });
      })
      .catch((error) => console.log(error));
-
+    }
      app.use("/api/", route);
      app.use("/authService", route);
 
