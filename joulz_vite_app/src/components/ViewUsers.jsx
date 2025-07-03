@@ -30,7 +30,7 @@ const [portfolios, setPortfolio] = useState([]);
     }
      const fetchUsers = async() => {
                     try{
-            const response = await axios.get("https://joulz-backend.onrender.com/api/users" , {
+            const response = await axios.get("https://joulz-vite-app-backend.onrender.com/api/users" , {
                 headers:{
                           Authorization:`Bearer ${token}`
 
