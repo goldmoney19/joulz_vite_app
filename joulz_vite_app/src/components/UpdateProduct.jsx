@@ -31,7 +31,7 @@ function UpdateProduct(props){
       }
 
  useEffect(() => {
-                         axios.get(`import.meta.env.VITE_APP_API_URL/api/product/${id}`)
+                         axios.get(`https://joulz-vite-app-backend.onrender.com/api/product/${id}`)
                          .then((response)=>{
                           console.log(response)
                           setFormData(response.data)
