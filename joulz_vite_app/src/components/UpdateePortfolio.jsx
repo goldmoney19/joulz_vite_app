@@ -34,7 +34,7 @@ function UpdateePortfolio(props){
       }
 
  useEffect(() => {
-                         axios.get(`import.meta.env.VITE_APP_API_URL/api/portfolio/${id}`)
+                         axios.get(`https://joulz-vite-app-backend.onrender.com/api/portfolio/${id}`)
                          .then((response)=>{
                           console.log(response)
                           setFormData(response.data)
@@ -52,7 +52,7 @@ function UpdateePortfolio(props){
                    e.preventDefault();
 
                   //   const portf = {title , description, design}
-                   await axios.put(`import.meta.env.VITE_APP_API_URL/api/update/portfolio/${id}`, formData)
+                   await axios.put(`https://joulz-vite-app-backend.onrender.com/api/update/portfolio/${id}`, formData)
                   .then((response)=>{
                      console.log("portfolio inserted");
                      navigate("/person");
