@@ -23,7 +23,7 @@ app.use(bodyParser.json());
 app.use(cookieParser());
 app.use(cors());
 const corsOptions = {
-  origin: 'https://vercel.com/g-coder/joulz-vite-app', // <-- Replace with your actual Vercel frontend URL
+  origin: 'joulz-vite-app.vercel.app', // <-- Replace with your actual Vercel frontend URL
   optionsSuccessStatus: 200 // Some legacy browsers (IE11, various SmartTVs) choke on 204
 };
 app.use(cors(corsOptions));
