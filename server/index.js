@@ -18,6 +18,11 @@ import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
+const corsOptions = {
+  origin: 'https://vercel.com/g-coder/joulz-vite-app', 
+  optionsSuccessStatus: 200
+};
+app.use(cors(corsOptions));
 
 
 const app = express();
@@ -31,11 +36,11 @@ app.use('/uploads', express.static(path.join(__dirname, 'Uploads')));
 app.use(express.static(path.join(__dirname, 'dist')));
 
 // Handle all routes by serving index.html
-app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'dist', 'index.html'));
-});
+// app.get('*', (req, res) => {
+//   res.sendFile(path.join(__dirname, 'dist', 'index.html'));
+// });
 
-if (process.env.NODE_ENV !== "production") {
+
 
 const PORT = process.env.PORT || 7000;
 const MONGOURL = process.env.MONGO_URL;
@@ -51,7 +56,7 @@ mongoose
         });
      })
      .catch((error) => console.log(error));
-    }
+   
      app.use("/api/", route);
      app.use("/authService", route);
 
