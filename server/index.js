@@ -21,9 +21,14 @@ dotenv.config();
 const app = express();
 app.use(bodyParser.json());
 app.use(cookieParser());
-app.use(cors());
+app.use(cors({
+  origin: 'https://joulz-vite-app.vercel.app', // <-- Make sure it has https://
+  credentials: true,
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization']
+}));
 const corsOptions = {
-  origin: 'joulz-vite-app.vercel.app', // <-- Replace with your actual Vercel frontend URL
+  origin: 'https://joulz-vite-app.vercel.app', // <-- Replace with your actual Vercel frontend URL
   optionsSuccessStatus: 200 // Some legacy browsers (IE11, various SmartTVs) choke on 204
 };
 app.use(cors(corsOptions));
