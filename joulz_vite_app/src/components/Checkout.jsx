@@ -27,7 +27,7 @@ function Checkout(props){
  useEffect(() => {
 
               const userDataa = {user_id:localStorage.getItem('user-id')}
-                         axios.post("import.meta.env.VITE_APP_API_URL/api/get_user_cart", userDataa)
+                         axios.post("https://joulz-vite-app-backend.onrender.com/api/get_user_cart", userDataa)
                          .then((response)=>{
                           console.log(response)
                           setFormData(response.data.cart)
