@@ -99,10 +99,10 @@ function App() {
 
  <Route path = "/shop" element = {<Shop />} />
 
-   <Route path = "/userCart" element = {
-     <ProtectedAdminRoute allowedRoles={'customer'}>
+  // <Route path = "/userCart" element = {
+     
     <UserCart />
-  </ProtectedAdminRoute>
+ 
   } />
 
     <Route path = "/checkout" element = {
