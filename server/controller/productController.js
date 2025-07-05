@@ -1,5 +1,6 @@
 import Product from "../model/Product.js";
-import path from 'path';
+import path from 'path';\const cloudinary = require('../configuration/cloudinary'); // Adjust path if needed
+import { v4 as uuidv4 } from 'uuid'; // For unique public_id
 
 
 
@@ -15,13 +16,43 @@ try{
               const price = req.body.price;
               
                 const keyword = req.body.keyword;
-                 const image = req.files.image[0];
-         const multipleImage = req.files.multipleImages.map(file => path.posix.join('uploads', file.filename));
-              
-              const imagePath = path.posix.join('uploads', image.filename);
+                 const { image, multipleImages } = req.files;
+                //  const image = req.files.image[0];
+         
+                 const singleImageResult = await new Promise((resolve, reject) => {
+      const stream = cloudinary.uploader.upload_stream(
+        { public_id: `products/${uuidv4()}`, folder: 'products' },
+        (error, result) => {
+          if (error) return reject(error);
+          resolve(result);
+        }
+      );
+      stream.end(image[0].buffer);
+    });
+
+
+
+
+    const multipleImagesResults = multipleImages
+      ? await Promise.all(
+          images.map(
+            (file) =>
+              new Promise((resolve, reject) => {
+                const stream = cloudinary.uploader.upload_stream(
+                  { public_id: `products/${uuidv4()}`, folder: 'products' },
+                  (error, result) => {
+                    if (error) return reject(error);
+                    resolve({ url: result.secure_url });
+                  }
+                );
+                stream.end(file.buffer);
+              })
+          )
+        )
+      : [];
 
                  const newprodukt =  new Product({title:title, description:description,smallDescription:smallDescription,
-                         price:price, keyword:keyword, image:imagePath, multipleImages:multipleImage})
+                         price:price, keyword:keyword, image:singleImageResult, multipleImages:multipleImagesResults})
                          const success = newprodukt.save();
                 res.status(200).json(success)
                }
