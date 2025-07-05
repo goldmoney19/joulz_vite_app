@@ -36,7 +36,7 @@ try{
 
     const multipleImagesResults = multipleImages
       ? await Promise.all(
-          images.map(
+          multipleImages.map(
             (file) =>
               new Promise((resolve, reject) => {
                 const stream = cloudinary.uploader.upload_stream(
