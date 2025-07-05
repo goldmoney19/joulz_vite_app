@@ -1,5 +1,6 @@
 import Product from "../model/Product.js";
-import path from 'path';\const cloudinary = require('../configuration/cloudinary'); // Adjust path if needed
+import path from 'path';
+import cloudinary from '../configuration/cloudinary'; // Adjust path if needed
 import { v4 as uuidv4 } from 'uuid'; // For unique public_id
 
 
