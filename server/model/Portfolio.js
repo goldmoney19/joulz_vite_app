@@ -20,15 +20,15 @@ const portfolioSchema = new mongoose.Schema({
                  required: true
    },
 
-image:{
+  image:{
                    type: String,
                  required: true
    },
-   multipleImages:{
-
-               type: [String],
-                default: [],
-   }
+     multipleImages:[{ // <-- This makes it an array
+        url: {
+          type: String,
+          required: true // Each image in the array must have a URL
+        }
     
 })
 
