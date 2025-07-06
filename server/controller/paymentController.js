@@ -86,9 +86,9 @@ export const verifyPayment = async(req,res)=> {
                 await order.save();
             }
              
-            res.redirect('http://localhost:5173/payment-success?reference=${reference}');
+            res.redirect('https://joulz-vite-app-backend.onrender.com/payment-success?reference=${reference}');
           }else{
-            res.redirect('http://localhost:5173/payment-failed?reference=${reference}');
+            res.redirect('https://joulz-vite-app-backend.onrender.com/payment-failed?reference=${reference}');
 
 
           }
