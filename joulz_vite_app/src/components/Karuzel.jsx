@@ -23,7 +23,7 @@ function Karuzel() {
 
        <img
        src = {image1}
-       className='d-block w-100 '
+       className='d-block w-100 banner_img'
       
         />
 
