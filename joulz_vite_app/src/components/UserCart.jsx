@@ -104,7 +104,7 @@ console.log(error.response?.data);
                         <tr>
                            <td>
                            <img style={{height: '70px', width: '70px'}}  src = 
-{`https://joulz-backend.onrender.com/${item.productId?.image}`}></img></td>
+{item.productId.image}></img></td>
                                        <td>{item.productId?.title}</td>
                                        <td>{item.productId?.price}</td>
                                       <td>{item.quantity}</td>
