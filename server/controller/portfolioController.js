@@ -13,18 +13,40 @@ console.log(req.files, 16);
             const title = req.body.title;
              const description = req.body.description;
               const design = req.body.design;
-               const image = req.files.image[0];
-                const multipleImages = req.files.multipleImages.map(file => path.posix.join('uploads', file.filename));
+              const { image, multipleImages } = req.files;
+                //  const image = req.files.image[0];
+         
+                 const singleImageResult = await new Promise((resolve, reject) => {
+      const stream = cloudinary.uploader.upload_stream(
+        { public_id: `products/${uuidv4()}`, folder: 'products' },
+        (error, result) => {
+          if (error) return reject(error);
+          resolve(result);
+        }
+      );
+      stream.end(image[0].buffer);
+    });
 
 
-              //  if(!title || !description || !design || !image ){
-              //    console.log("all inputs are required");
-              //    return res.status(400).json({message:"all inputs are required"});
-                
-           
-              //  }
-  const imagePath = path.posix.join('uploads', image.filename);
-  // const multipleImagePath = path.posix.join('uploads', multipleImages.filename);
+
+
+    const multipleImagesResults = multipleImages
+      ? await Promise.all(
+          multipleImages.map(
+            (file) =>
+              new Promise((resolve, reject) => {
+                const stream = cloudinary.uploader.upload_stream(
+                  { public_id: `products/${uuidv4()}`, folder: 'products' },
+                  (error, result) => {
+                    if (error) return reject(error);
+                    resolve({ url: result.secure_url });
+                  }
+                );
+                stream.end(file.buffer);
+              })
+          )
+        )
+      : [];
 
 
  //const imagePath = image.path.replace('\\g', '');
