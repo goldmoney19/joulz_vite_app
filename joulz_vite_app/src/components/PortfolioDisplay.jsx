@@ -19,7 +19,13 @@ function PortfolioDisplay() {
                         const fetchData = async(req, res) => {
         
                         try{
-                 const response = await axios.get("https://joulz-vite-app-backend.onrender.com/portDisp/portfolio_display" )
+                 const response = await axios.get("https://joulz-vite-app-backend.onrender.com/portDisp/portfolio_display" , {
+                 withCredentials: true,
+                headers:{
+                          Authorization:`Bearer ${token}`
+
+                }
+               } )
                   setProducts(response.data);
          
                            }
