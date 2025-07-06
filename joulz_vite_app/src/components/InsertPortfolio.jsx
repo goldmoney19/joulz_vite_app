@@ -42,7 +42,12 @@ console.log(multipleImages);
 
                   
                    
-                   await axios.post("https://joulz-vite-app-backend.onrender.com/api/portfolio", formData)
+                   await axios.post("https://joulz-vite-app-backend.onrender.com/api/portfolio", formData , {
+                                    withCredentials: true,
+                                   headers:{
+                                    "Content-Type":'multipart/form-data'
+                        }
+                           })
                   .then((response)=>{
                      console.log("portfolio inserted");
                      navigate("/person");
