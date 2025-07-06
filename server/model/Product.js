@@ -29,11 +29,12 @@ const productSchema = new mongoose.Schema({
                    type: String,
                  required: true
    },
-    multipleImages:{
-
-                url: String,
-               
-   }
+     multipleImages:[{ // <-- This makes it an array
+        url: {
+          type: String,
+          required: true // Each image in the array must have a URL
+        }
+      }]
     
       
 
