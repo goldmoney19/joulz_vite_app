@@ -69,8 +69,9 @@ for(let pair of formData.entries()){
                                    )
                   .then((response)=>{
                      console.log(response);
+                     navigate("/viewProducts");
                      console.log("product inserted");
-                   navigate("/viewProducts");
+                  
                   })
                   .catch((error)=>{
 
