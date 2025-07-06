@@ -58,7 +58,7 @@ try{
                 res.status(200).json(success)
                }
  catch(error){
-         console.error("portfolio create error", {
+         console.error("product create error", {
 
           message:error.message,
           stack:error.stack,
