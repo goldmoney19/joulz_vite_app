@@ -106,15 +106,15 @@ function App() {
   } />
 
     <Route path = "/checkout" element = {
-       <ProtectedAdminRoute allowedRoles={'customer'}>
+    
       <Checkout />
-     </ProtectedAdminRoute>
+    
   } />
       
     <Route path = "/order_confirmation" element = {
-      <ProtectedAdminRoute allowedRoles={'customer'}>
+     
       <OrderConfirmation />
-       </ProtectedAdminRoute>
+     
   } />
 
     <Route path = "/profile_page" element = {
