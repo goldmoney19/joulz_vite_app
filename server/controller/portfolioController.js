@@ -1,5 +1,8 @@
 import Portfolio from "../model/Portfolio.js";
 import path from 'path';
+import cloudinary from '../configuration/cloudinary.js'; // Adjust path if needed
+import { v4 as uuidv4 } from 'uuid'; // For unique public_id
+
 
 
 
