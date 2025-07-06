@@ -59,7 +59,7 @@ function Shop() {
                    products.map((item, index) => (
                     <Col  key = {index}  xs = {6} sm={3} >
                     <div >
-                       <Nav.Link href ={`/productDetails/` +item._id} type='button'><img  style={{height: '150px', width: '150px'}}  src = {`https://joulz-vite-app-backend.onrender.com/${item?.image}`}
+                       <Nav.Link href ={`/productDetails/` +item._id} type='button'><img  style={{height: '150px', width: '150px'}}  src = {item.image}
                        /></Nav.Link>
                       <p  className='shop_text4'>{item.title}</p>
                         <p  className='shop_text3'>{item.smallDescription}</p>
