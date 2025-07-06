@@ -29,13 +29,17 @@ formData.append("title",title)
 formData.append("description",description)
 formData.append("design",design)
 formData.append("image",image)
-multipleImages.forEach((imaggs)=> formData.append('multipleImages', imaggs))
 
-console.log(title);
-console.log(description);
-// console.log(price);
-console.log(image);
-console.log(multipleImages);
+      const files = e.target.multipleImages.files;
+for(let i = 0;i<files.length;i++){
+
+  formData.append('multipleImages',files[i]);
+}
+
+for(let pair of formData.entries()){
+
+  console.log(`${pair[0]}: ${pair[1].name}, Size: ${pair[1].size} bytes`)
+}
 
 
 // console.log(formData);
