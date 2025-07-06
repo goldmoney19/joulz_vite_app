@@ -63,11 +63,12 @@ for(let pair of formData.entries()){
                                     {
                                     withCredentials: true,
                                    headers:{
-                                   // "Content-Type":"application/json"
+                                    "Content-Type":'multipart/form-data'
                         }
                            }
                                    )
                   .then((response)=>{
+                     console.log(response);
                      console.log("product inserted");
                     // navigate("/viewProducts");
                   })
