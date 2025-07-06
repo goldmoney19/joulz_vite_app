@@ -50,7 +50,7 @@ fetchData();
 
 
    const deletePortfolio = async (userId) => {
-         await axios.delete(`import.meta.env.VITE_APP_API_URL/api/delete/portfolio/${userId}`)
+         await axios.delete(`https://joulz-vite-app-backend.onrender.com/api/delete/portfolio/${userId}`)
         .then((response) => {
         setPortfolio((prevUser)=>prevUser.filter((user)=>user._id !==userId))
 
@@ -132,7 +132,7 @@ fetchData();
           <td>{portff.title}</td>
           <td>{portff.description}</td>
           <td>{portff.design}</td>
-           <td><img style={{height: '30px', width: '30px'}}  src = {portff.image}></img></td>
+           <td><img style={{height: '30px', width: '30px'}}  src = {portff?.image}></img></td>
           <td>
             {portff.multipleImages.map((img, index) => (
 
