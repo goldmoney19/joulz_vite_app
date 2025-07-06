@@ -58,7 +58,7 @@ const ProductDetails = () => {
                   
          const _data = {productId:produktId,quantity, user_id}
             
-         axios.post("https://joulz-vite-app-backend.onrender.com/add_To_cart" , _data)
+         axios.post("https://joulz-vite-app-backend.onrender.com/api/add_To_cart" , _data)
 
           .then(response=>{
                      console.log(response.data);
