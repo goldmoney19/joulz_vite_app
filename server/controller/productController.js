@@ -53,7 +53,7 @@ try{
       : [];
 
                  const newprodukt =  new Product({title:title, description:description,smallDescription:smallDescription,
-                         price:price, keyword:keyword, image:singleImageResult, multipleImages:multipleImagesResults})
+                         price:price, keyword:keyword, image:singleImageResult.secure_url, multipleImages:multipleImagesResults})
                          const success = await newprodukt.save();
                 res.status(200).json(success)
                }
