@@ -29,7 +29,7 @@ const portfolioSchema = new mongoose.Schema({
           type: String,
           required: true // Each image in the array must have a URL
         }
-    
+     }]
 })
 
 export default mongoose.model("Portfolios", portfolioSchema)
