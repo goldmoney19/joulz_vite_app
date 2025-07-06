@@ -70,7 +70,7 @@ for(let pair of formData.entries()){
                   .then((response)=>{
                      console.log(response);
                      console.log("product inserted");
-                    // navigate("/viewProducts");
+                   navigate("/viewProducts");
                   })
                   .catch((error)=>{
 
