@@ -132,17 +132,17 @@ fetchData();
           <td>{portff.title}</td>
           <td>{portff.description}</td>
           <td>{portff.design}</td>
-           <td><img style={{height: '30px', width: '30px'}}  src = {`https://joulz-backend.onrender.com/${portff?.image}`}></img></td>
+           <td><img style={{height: '30px', width: '30px'}}  src = {portff.image}></img></td>
           <td>
             {portff.multipleImages.map((img, index) => (
 
-                          <img key ={index} style={{height: '30px', width: '30px'}}  src = {`https://joulz-backend.onrender.com/${img}`}></img>
+                          <img key ={index} style={{height: '30px', width: '30px'}}  src = {img}></img>
 
             ))}
             
             </td>
 
-           {console.log(`http://localhost:8000/${portff?.image}`)}
+           {console.log({portff.image}}
            <td className='btn btn-warning btn-sm'> <Nav.Link href ={`/updatePortfolio/` +portff._id} type='button'>edit</Nav.Link></td>
        <td className='btn btn-danger btn-sm'> <Nav.Link  onClick = {()=>deletePortfolio(portff._id)}>delete</Nav.Link></td>
      </tr>
