@@ -51,7 +51,7 @@ console.log(req.files, 16);
 
  //const imagePath = image.path.replace('\\g', '');
          const newportf =  new Portfolio({title:title, description:description,
-          design:design, image:imagePath,multipleImages:multipleImages})
+          design:design, image:singleImageResult.secure_url, multipleImages:multipleImagesResults})
           const success = newportf.save();
  res.status(200).json(success)
      }
