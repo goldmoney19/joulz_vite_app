@@ -58,7 +58,15 @@ for(let pair of formData.entries()){
 
                    
                    
-                   await axios.post("https://joulz-vite-app-backend.onrender.com/api/product", formData)
+                   await axios.post("https://joulz-vite-app-backend.onrender.com/api/product", 
+                                    formData,
+                                    {
+                                    withCredentials: true,
+                                   headers:{
+                                   // "Content-Type":"application/json"
+                        }
+                           }
+                                   )
                   .then((response)=>{
                      console.log("product inserted");
                     navigate("/viewProducts");
