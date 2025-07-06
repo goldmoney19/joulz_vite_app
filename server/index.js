@@ -12,7 +12,7 @@ import cookieParser from "cookie-parser"
 import paymentRoute from "./routes/paymentRoute.js"
 import path from "path";
 import upload from "./services/upload.js"
-import upload from "./configuration/multerConfig.js"
+// import upload from "./configuration/multerConfig.js"
 
 import { fileURLToPath } from 'url';
 
@@ -22,6 +22,7 @@ dotenv.config();
 const app = express();
 app.use(bodyParser.json());
 app.use(cookieParser());
+
 app.use(cors({
   origin: 'https://joulz-vite-app.vercel.app', // <-- Make sure it has https://
   credentials: true,
@@ -33,7 +34,6 @@ const corsOptions = {
   optionsSuccessStatus: 200 // Some legacy browsers (IE11, various SmartTVs) choke on 204
 };
 app.use(cors(corsOptions));
-
 
 
 
