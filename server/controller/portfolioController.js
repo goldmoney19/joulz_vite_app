@@ -18,7 +18,7 @@ console.log(req.files, 16);
          
                  const singleImageResult = await new Promise((resolve, reject) => {
       const stream = cloudinary.uploader.upload_stream(
-        { public_id: `products/${uuidv4()}`, folder: 'products' },
+        { public_id: `portfolios/${uuidv4()}`, folder: 'portfolios' },
         (error, result) => {
           if (error) return reject(error);
           resolve(result);
@@ -36,7 +36,7 @@ console.log(req.files, 16);
             (file) =>
               new Promise((resolve, reject) => {
                 const stream = cloudinary.uploader.upload_stream(
-                  { public_id: `products/${uuidv4()}`, folder: 'products' },
+                  { public_id: `portfolios/${uuidv4()}`, folder: 'portfolios' },
                   (error, result) => {
                     if (error) return reject(error);
                     resolve({ url: result.secure_url });
