@@ -31,6 +31,7 @@ const navigate = useNavigate();
 
                 try{
          const response = await axios.get("https://joulz-vite-app-backend.onrender.com/api/portfolios" , {
+                 withCredentials: true,
                 headers:{
                           Authorization:`Bearer ${token}`
 
