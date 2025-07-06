@@ -83,20 +83,14 @@ const ProductDetails = () => {
                   
                    {
                    <>
-                   <Col key = {penthause.id} sm = {10}  >
+                   <Col key = {penthause.id} sm = {6}  >
                     <img  style={{height: '400px', width: '100%'}}  src = {penthause.image}
                        />
 
                    </Col>
                    
 
-                    {penthause?.multipleImages?.map((img, index) => (
-                 <Col sm = {3} key ={index} >
-     <span><img  style={{height: '90px', width: '130px',float:'left',marginTop:'40px'}}  src = {`https://joulz-vite-app-backend.onrender.com/${img}`}></img></span>
-                 </Col>
-            ))}
-                  
-                 <Col  key = {penthause.id} sm = {4} >
+                  <Col  key = {penthause.id} sm = {6} >
                     <div >
                      <br></br><br></br>
                          <p className='details_text2'>{penthause.title}</p>
