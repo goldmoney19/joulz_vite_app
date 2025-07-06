@@ -12,7 +12,7 @@ import cookieParser from "cookie-parser"
 import paymentRoute from "./routes/paymentRoute.js"
 import path from "path";
 import upload from "./services/upload.js"
-// import upload from "./configuration/multerConfig.js"
+import upload from "./configuration/multerConfig.js"
 
 import { fileURLToPath } from 'url';
 
