@@ -86,9 +86,9 @@ export const verifyPayment = async(req,res)=> {
                 await order.save();
             }
              
-            res.redirect('https://joulz-vite-app-backend.onrender.com/payment-success?reference=${reference}');
+            res.redirect('https://joulz-vite-app.vercel.app/payment-success?reference=${reference}');
           }else{
-            res.redirect('https://joulz-vite-app-backend.onrender.com/payment-failed?reference=${reference}');
+            res.redirect('https://joulz-vite-app.vercel.app/payment-failed?reference=${reference}');
 
 
           }
@@ -97,7 +97,7 @@ export const verifyPayment = async(req,res)=> {
     catch(error){
 
        console.log(error);
- res.redirect('http://localhost:8000/payment-failed?reference=${reference}');
+ res.redirect('https://joulz-vite-app.vercel.app/payment-failed?reference=${reference}');
 
     }
 
