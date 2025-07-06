@@ -116,6 +116,12 @@ font-weight: bold;
 font-size: 20px;
 }
 
+.banner_img{
+  /* border: 3px solid green; */
+  filter: brightness(30%);
+}
+
+
 
 
 .caption_cover p.caption_text1{
