@@ -84,7 +84,7 @@ const ProductDetails = () => {
                    {
                    <>
                    <Col key = {penthause.id} sm = {10}  >
-                    <img  style={{height: '400px', width: '100%'}}  src = {`https://joulz-vite-app-backend.onrender.com/${penthause?.image}`}
+                    <img  style={{height: '400px', width: '100%'}}  src = {penthause.image}
                        />
 
                    </Col>
