@@ -38,9 +38,9 @@ app.use(cors(corsOptions));
 
 
 
-app.use('/uploads', express.static(path.join(__dirname, 'Uploads')));
+// app.use('/uploads', express.static(path.join(__dirname, 'Uploads')));
 
-app.use(express.static(path.join(__dirname, 'dist')));
+// app.use(express.static(path.join(__dirname, 'dist')));
 
 // Handle all routes by serving index.html
 // app.get('*', (req, res) => {
