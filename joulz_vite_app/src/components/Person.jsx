@@ -18,7 +18,7 @@ function Person(props){
 const navigate = useNavigate();
    
                  
- const [portfolios, setPortfolio] = useState([]);
+ const [portfolios, setPortfolios] = useState([]);
 
  useEffect(()=>{
 
