@@ -37,7 +37,7 @@ const navigate = useNavigate();
 
                 }
                })
-       setPortfolio(response.data)
+       setPortfolios(response.data)
                    }
              catch (error) {
      console.log("error while fetching", error) 
