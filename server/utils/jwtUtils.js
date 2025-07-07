@@ -10,7 +10,7 @@ const generateToken = (user) => {
         email:user.email,
         role:user.role
       }
-    return jwt.sign(payload, secretKey, {expiresIn:"1d"});
+    return jwt.sign(payload, "p7i3`~Kt6H8xM+67Y%m&$L?}$PXiwR", {expiresIn:"1d"});
 
 };
 
