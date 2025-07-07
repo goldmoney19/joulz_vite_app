@@ -143,7 +143,7 @@ fetchData();
             
             </td>
 
-           {console.log({portff.image}}
+
            <td className='btn btn-warning btn-sm'> <Nav.Link href ={`/updatePortfolio/` +portff._id} type='button'>edit</Nav.Link></td>
        <td className='btn btn-danger btn-sm'> <Nav.Link  onClick = {()=>deletePortfolio(portff._id)}>delete</Nav.Link></td>
      </tr>
