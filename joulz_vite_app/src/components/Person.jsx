@@ -53,7 +53,7 @@ fetchData();
    const deletePortfolio = async (userId) => {
          await axios.delete(`https://joulz-vite-app-backend.onrender.com/api/delete/portfolio/${userId}`)
         .then((response) => {
-        setPortfolio((prevUser)=>prevUser.filter((user)=>user._id !==userId))
+        setPortfolios((prevUser)=>prevUser.filter((user)=>user._id !==userId))
 
         })
         .catch((error)=>{
