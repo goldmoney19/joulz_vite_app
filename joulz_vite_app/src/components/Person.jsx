@@ -135,11 +135,11 @@ fetchData();
           <td>{portff.design}</td>
            <td><img style={{height: '30px', width: '30px'}}  src = {portff.image}></img></td>
           <td>
-            {portff.multipleImages.map((img, index) => (
+           
 
-                          <img key ={index} style={{height: '30px', width: '30px'}}  src = {img}></img>
+                          <img key ={index} style={{height: '30px', width: '30px'}}  src = {portff.multipleImages}></img>
 
-            ))}
+           
             
             </td>
 
