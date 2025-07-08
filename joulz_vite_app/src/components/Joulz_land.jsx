@@ -5,7 +5,7 @@ import image2 from '../assets/mail2.png'
 import image4 from '../assets/uju2.jpg'
 
 import image5 from '../assets/whatsapp.png'
-
+import image6 from '../assets/insta.png'
 import image7 from '../assets/telegram_logo.png'
 import image8 from '../assets/facebook_logo.png'
 import image9 from '../assets/joulz_logo.jpg'
