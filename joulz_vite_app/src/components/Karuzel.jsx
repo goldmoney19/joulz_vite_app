@@ -8,6 +8,7 @@ import telegram from '../assets/telelogo.png'
 import facebook from '../assets/facelogo.png'
 import whatsapp from '../assets/whatsapp-256.png'
 import instagram from '../assets/insta.png'
+import Navvbar from './components/Navvbar'
 
 
 
@@ -17,6 +18,7 @@ function Karuzel() {
    
              return  ( 
               <Container fluid className='p-0'>
+                 <Navvbar />
         <div className='m-0 p-0' style={{fontFamily: "EB Garamond,serif",width:'100%'}}>
         <Carousel fade interval = "4000">
       <Carousel.Item>
