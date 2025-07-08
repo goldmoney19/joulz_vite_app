@@ -5,7 +5,7 @@ import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import toast from 'react-hot-toast';
 import Footer from './Footer';
-import Navvbar from './components/Navvbar.jsx';
+
 
 
 
@@ -85,7 +85,7 @@ const user_id = localStorage.getItem("user-id");
      return <div  style = {{border:'none',minHeight:'500px',backgroundColor:'white'}}> 
 
      <Container style = {{border:'none',marginTop:'10px'}}>
-           <Navvbar /> 
+          
            
 
  <Row style = {{border:'none',marginBottom:'120px',paddingTop:'100px'}}>
