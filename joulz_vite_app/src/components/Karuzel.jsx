@@ -8,7 +8,7 @@ import telegram from '../assets/telelogo.png'
 import facebook from '../assets/facelogo.png'
 import whatsapp from '../assets/whatsapp-256.png'
 import instagram from '../assets/insta.png'
-import Navvbar from './Navvbar'
+import Navvbar from './Navvbar.jsx';
 
 
 
