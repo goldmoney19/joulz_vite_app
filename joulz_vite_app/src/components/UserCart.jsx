@@ -4,7 +4,7 @@ import axios from 'axios';
 import {Container, Row, Col, Nav} from 'react-bootstrap'
 import Footer from './Footer';
 import { useNavigate } from 'react-router-dom';
-import Navvbar from './Navvbar';
+import Navvbar from './components/Navvbar.jsx';
 
 
 import Cookies from "cookie-universal"
