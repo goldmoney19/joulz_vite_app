@@ -1,7 +1,7 @@
 import React from 'react'
 import './App.css'
 import Home from './components/Home'
-import Navvbar from '../components/Navvbar'
+import Navbar from './components/Navbar'
 
 import About from './components/About'
 import Contact from './components/Contact'
@@ -42,7 +42,7 @@ function App() {
     <>
       <div>
         <BrowserRouter>
- <Navvbar />
+ <Navbar />
   <Routes>
       <Route path = "/payment-success" element = {
          <ProtectedAdminRoute allowedRoles={'customer'}>
