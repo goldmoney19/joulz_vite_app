@@ -38,7 +38,7 @@ function Shop() {
              return (
                 <div > 
              <Container className='shop_con'>
-                   <Navvbar />
+
                 <Row className='shop_text_row'>
                     <Col>
                     <h4 className='shop_text'>Products</h4>
