@@ -1,7 +1,7 @@
 import React from 'react'
 import './App.css'
 import Home from './components/Home'
-import Navvbar from './components/Navvbar'
+
 
 import About from './components/About'
 import Contact from './components/Contact'
@@ -30,7 +30,7 @@ import ProtectedAdminRoute from './components/ProtectedAdminRoute'
 import Unauthorized from './components/Unauthorized'
 import UpdateProduct from './components/UpdateProduct'
 import Joulz_land from './components/Joulz_land'
-
+import Navvbar from './components/Navvbar'
 
 
 import {BrowserRouter, Routes, Route} from 'react-router-dom'
@@ -42,7 +42,7 @@ function App() {
     <>
       <div>
         <BrowserRouter>
-  <Navvbar />
+ <Navvbar />
   <Routes>
       <Route path = "/payment-success" element = {
          <ProtectedAdminRoute allowedRoles={'customer'}>
