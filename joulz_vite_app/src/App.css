@@ -571,6 +571,139 @@ padding-top: 100px;
 
   }
 
+
+
+
+  .joulz_landContainer{
+
+border:none;
+min-height: 500px;
+
+margin-top: 20px;
+
+background-image: url('./assets/interior2.jpg');
+background-attachment: fixed;
+background-size: cover;
+background-position: center;
+
+  } 
+
+
+
+
+div.bubbles{
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  height: 50px;
+  width: 50px;
+  border: 2px solid white;
+  z-index: 1;
+  border-radius: 50px;
+  	animation: bubble 2s linear infinite;
+
+
+}
+
+.dot{
+
+	height:10px;
+	width: 10px;
+	border: 2px solid white;
+	border-radius: 50px;
+	position: absolute;
+	top: 5px;
+	left: 14px;
+	background-color: white;
+}
+
+
+div.bubbles:nth-child(1){
+
+	top:400px;
+	left:1200px;
+	animation: bubble 3s linear infinite;
+}
+
+
+
+div.bubbles:nth-child(2){
+
+	top:500px;
+	left:70px;
+	animation: bubble 3s linear infinite;
+}
+
+
+
+div.bubbles:nth-child(3){
+
+	top:60px;
+	left:150px;
+	animation: bubble 3s linear infinite;
+}
+
+div.bubbles:nth-child(4){
+
+	top:550px;
+	left:210px;
+	animation: bubble 3s linear infinite;;
+}
+
+div.bubbles:nth-child(5){
+
+	top:30px;
+	left:330px;
+	animation: bubble 3s linear infinite;
+}
+
+div.bubbles:nth-child(6){
+
+	top:250px;
+	left:70px;
+	animation: bubble 5s linear infinite;
+}
+
+div.bubbles:nth-child(7){
+
+	top:20px;
+	left:120px;
+	animation: bubble 3s linear infinite;
+}
+
+div.bubbles:nth-child(8){
+
+	top:680px;
+	left:80px;
+	animation: bubble 4s linear infinite;
+}
+
+div.bubbles:nth-child(9){
+
+	top:500px;
+	left:260px;
+	animation: bubble 5s linear infinite;
+}
+
+div.bubbles:nth-child(10){
+
+	top:300px;
+	left:290px;
+	animation: bubble 2s linear infinite;
+}
+
+
+@keyframes bubble{
+
+
+	0%{  transform:scale(0) translateY(0px) rotate(70deg); }
+	100%{ transform:scale(0.2) translateY(-1150px) rotate(360deg); }
+}
+
+
+
+
+
   /* .UserCart_totalNum{
 
 
