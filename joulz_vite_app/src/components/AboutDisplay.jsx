@@ -28,7 +28,7 @@ function AboutDisplay(){
       always brings fresh ideas and inspires our design</p>
 <br></br>
   <button className="btn btn-sm btn-outline-secondary about_button">
-    MORE</button>
+     <Nav.Link href ="/about" >More</Nav.Link></button>
             </Col>
           </Row>
 
