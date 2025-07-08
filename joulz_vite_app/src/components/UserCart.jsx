@@ -4,7 +4,7 @@ import axios from 'axios';
 import {Container, Row, Col, Nav} from 'react-bootstrap'
 import Footer from './Footer';
 import { useNavigate } from 'react-router-dom';
-import Navvbar from './components/Navvbar.jsx';
+
 
 
 import Cookies from "cookie-universal"
@@ -80,7 +80,7 @@ console.log(error.response?.data);
                return ( 
                  <div> 
                   <Container className='userCart_row'>
-                       <Navvbar />
+                    
                   
                   <h3 style = {{fontFamily: "EB Garamond,serif"}}>Cart</h3>
                   <br></br>
