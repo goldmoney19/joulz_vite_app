@@ -5,6 +5,7 @@ import axios from 'axios';
 import Cookies from "cookie-universal"
 import toast from 'react-hot-toast';
 import {Button, Nav} from 'react-bootstrap'
+import Navvbar from './components/Navvbar.jsx';
 
 
 const cookies = new Cookies();
