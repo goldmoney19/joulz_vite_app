@@ -6,6 +6,7 @@ import {useParams, useNavigate} from 'react-router-dom';
 import toast from 'react-hot-toast';
 import '../App.css'
 import Shop from './Shop';
+import Navvbar from './Navvbar';
 
 
 
@@ -74,8 +75,8 @@ const ProductDetails = () => {
        }
 
      return  <div > 
-             <Container fluid className='details_cover' >
-              
+             <Container fluid  >
+              <Navvbar />
 <h4 className='details_text1'> Product Details</h4>
                 <Row >
 
