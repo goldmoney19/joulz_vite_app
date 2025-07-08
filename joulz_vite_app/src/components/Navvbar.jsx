@@ -26,7 +26,7 @@ function Navvbar() {
         
          toast.success("Logout successful", {position:"top-right"});
 
-          navigate("/login");
+          navigate("/");
 
   }
       
