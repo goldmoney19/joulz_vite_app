@@ -223,7 +223,7 @@ min-height:400px;
 }
 
 .portfolio_text{
-color: rgb(100, 52, 52);
+color:black;
   padding-top: 60px;
 }
 
@@ -231,7 +231,7 @@ color: rgb(100, 52, 52);
 
   font-size: 16px;
   padding-top: 30px;
-  color: rgb(100, 52, 52);
+  color: black;
 }
 
 .about_cover{
@@ -251,7 +251,7 @@ color: rgb(100, 52, 52);
 
 .about_text{
  padding-bottom: 20px;
- color: rgb(100, 52, 52)
+ color: black;
 }
 
 .about_button{
@@ -271,7 +271,7 @@ width: 150px;
 
   margin-top: 70p;
   padding-bottom: 5px;
-  color: rgb(100, 52, 52);
+  color: black;
 }
 
 .shop_text2{
@@ -306,7 +306,7 @@ width: 150px;
 
 .shop_text_row3{
   padding-top: 30px;
-  color: rgb(100, 52, 52);
+  color: black;
 }
 
 .buy{
@@ -322,7 +322,7 @@ width: 150px;
 
 .whatweoffer_text{
 
-  color: rgb(100, 52, 52);
+  color: black;
 }
 
 .whatWeOffer_text2{
@@ -331,7 +331,7 @@ width: 150px;
  margin-top: 30px;
   font-size: 17px;
   border:none;
-  color: rgb(100, 52, 52);
+  color:black;
 
 }
 
@@ -339,7 +339,7 @@ width: 150px;
 
   font-size: 20px;
   padding-top: 20px;
-  color: rgb(100, 52, 52);
+  color: black;
 }
 
 
@@ -347,7 +347,7 @@ width: 150px;
   border:none;
   height:450px;
   font-family: "EB Garamond",serif;
-  color: rgb(100, 52, 52);
+  color: black;
 }
 
 .why_choose_row{
@@ -366,7 +366,7 @@ padding-top: 50px;
 
   list-style-type: disc;
   font-size: 18px;
-  color: rgb(100, 52, 52);
+  color: black;
 }
 
 .aboutPage_con{
@@ -448,7 +448,7 @@ height: 300px;
 .details_cover{
 margin-top: 80px;
 border:none;
-color: rgb(100, 52, 52);
+color: black;
   text-align:left;
 }
 
@@ -456,21 +456,21 @@ color: rgb(100, 52, 52);
   font-family: "EB Garamond",serif;
 margin-top: 30px;
 margin-bottom: 30px;
-color: rgb(100, 52, 52);
+color: black;
 }
 
 .details_text2{
 font-family: "EB Garamond",serif;
   font-size: 22px;
   font-weight:nornal;
- color: rgb(100, 52, 52);
+ color:black;
 }
 
 .details_text3{
 font-family: "EB Garamond",serif;
   font-size: 20px;
    text-align: left;
-   color: rgb(100, 52, 52);
+   color:black;
 }
 
 .details_text4{
@@ -478,7 +478,7 @@ font-family: "EB Garamond",serif;
   font-size: 20px;
    text-align: left;
    font-weight: bold;
-   color: rgb(100, 52, 52);
+   color: black;
 }
 
   .quantity_cover{
@@ -730,7 +730,7 @@ div.bubbles:nth-child(10){
   border:none;
   height:820px;
   font-family: "EB Garamond",serif;
-  color: rgb(100, 52, 52);
+  color:black;
 }
 
 .ourStory_row{
@@ -759,13 +759,13 @@ margin-bottom: 70px;
 
 .about_text{
  padding-bottom: 20px;
- color: rgb(100, 52, 52);
+ color:black;
  
 }
 
 .about_text2{
  padding-top: 20px;
- color: rgb(100, 52, 52);
+ color: black;
  font-size: 17px;
  
 }
