@@ -5,7 +5,7 @@ import image2 from '../assets/mail2.png'
 import image4 from '../assets/uju2.jpg'
 
 import image5 from '../assets/whatsapp.png'
-import image6 from '../assets/instagram_logo.png'
+
 import image7 from '../assets/telegram_logo.png'
 import image8 from '../assets/facebook_logo.png'
 import image9 from '../assets/joulz_logo.jpg'
@@ -67,7 +67,7 @@ const Joulz_land = () => {
 
 <div className="col-sm-12 instagram_column1" style={{marginBottom:"40px"}}>
   <button type="button" className="btn btn-lg btn-outline-light" style={{height:"60px"}}><a href ="https://www.instagram.com/jujuumobi_/"
-   style={{color:"white",textDecoration:"none"}}><img src = {image6} style={{height: "35px",
+   style={{color:"white",textDecoration:"none"}}><img src = {image8} style={{height: "35px",
   width: "35px",marginRight: "20px",backgroundSize: "cover",backgroundRepeat: "no-repeat", borderRadius: "25px"}} />
   <span style={{fontSize:"14px",color:"white"}}>FOLLOW ON INSTAGRAM</span></a></button>
 
