@@ -2,6 +2,7 @@ import React from 'react'
 import {Container, Row, Col,Nav, Navbar,NavLink,Button} from 'react-bootstrap'
 import {useState , useEffect} from 'react'
 import axios from 'axios';
+import Navvbar from './Navvbar';
 
 
 import Cookies from "cookie-universal"
@@ -37,6 +38,7 @@ function Shop() {
              return (
                 <div > 
              <Container className='shop_con'>
+                   <Navvbar />
                 <Row className='shop_text_row'>
                     <Col>
                     <h4 className='shop_text'>Products</h4>
