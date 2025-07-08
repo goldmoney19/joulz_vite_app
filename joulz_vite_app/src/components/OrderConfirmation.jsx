@@ -3,6 +3,7 @@ import { useLocation, useNavigate } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 import {Button, Container, Row, Col} from 'react-bootstrap'
+import Navvbar from './Navvbar';
 
 import Cookies from "cookie-universal"
 
@@ -50,6 +51,7 @@ console.log(error);
  paddingTop:'50px'}}> 
             
    <Container style = {{border:'none',marginTop:'10px'}}>
+      <Navvbar />
 
  <Row style = {{border:'none',marginBottom:'120px',paddingTop:'100px'}}>
  <Col sm= {12} className = 'table-responsive'>
