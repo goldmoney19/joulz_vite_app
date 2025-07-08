@@ -91,12 +91,12 @@ console.log(error.response?.data);
                     <table>
                       <thead>
                         <tr>
-                          <td>image </td>
-                           <td>title </td>
-                            <td>price </td>
-                             <td>quantity </td>
-                              <td>total</td>
-                               <td>delete </td>
+                          <td style = {{fontFamily: "EB Garamond,serif"}}> image </td>
+                           <td style = {{fontFamily: "EB Garamond,serif"}}>title </td>
+                            <td style = {{fontFamily: "EB Garamond,serif"}}>price </td>
+                             <td style = {{fontFamily: "EB Garamond,serif"}}>quantity </td>
+                              <td style = {{fontFamily: "EB Garamond,serif"}}>total</td>
+                               <td style = {{fontFamily: "EB Garamond,serif"}}>delete </td>
                         </tr>
                       </thead>
                        <tbody>
@@ -105,12 +105,12 @@ console.log(error.response?.data);
                            <td>
                            <img style={{height: '70px', width: '70px'}}  src = 
 {item.productId.image}></img></td>
-                                       <td>{item.productId?.title}</td>
-                                       <td>{item.productId?.price}</td>
-                                      <td>{item.quantity}</td>
-                                        <td>${(item.productId.price * item.quantity).toFixed(2)}</td>
+                                       <td style = {{fontFamily: "EB Garamond,serif"}}>{item.productId?.title}</td>
+                                       <td style = {{fontFamily: "EB Garamond,serif"}}>{item.productId?.price}</td>
+                                      <td style = {{fontFamily: "EB Garamond,serif"}}>{item.quantity}</td>
+                                        <td style = {{fontFamily: "EB Garamond,serif"}}>${(item.productId.price * item.quantity).toFixed(2)}</td>
                                          
-                                     <td><button className='btn btn-sm btn-danger' onClick={()=>handleDeleteCart(item.productId._id)}>delete</button></td>
+                                     <td style = {{fontFamily: "EB Garamond,serif"}}><button className='btn btn-sm btn-danger' onClick={()=>handleDeleteCart(item.productId._id)}>delete</button></td>
                           </tr>
                    </>))}
                                </tbody>
@@ -125,13 +125,13 @@ console.log(error.response?.data);
                             <Row className="UserCart_totalPriceCover">
                                 <Col sm={12}>
 
-                                <h3 className = 'UserCart_totalText'>Cart Total</h3>
+                                <h3 className = 'UserCart_totalText' style = {{fontFamily: "EB Garamond,serif"}}>Cart Total</h3>
                            <div style={{width:'100%'}}>
                                 <table style={{width:'100%'}}>
                                     <thead>
                                     <tr>
                                     <th >Subtotal </th>
-                                    <th style={{ textAlign:'right'}}>${totalPrice}</th>
+                                    <th style={{ textAlign:'right',fontFamily: "EB Garamond,serif"}}>${totalPrice}</th>
                                     </tr>
                                     </thead>
 
