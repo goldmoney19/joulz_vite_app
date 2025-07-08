@@ -52,6 +52,7 @@ function ProfilePage(){
    
              return <div> 
       <Container fluid style = {{paddingTop:'70px'}}>
+       <Navvbar />
              <Row>
 
                        <Col sm = {2} style = {{border:'1px solid grey',height:'450px'}}>
