@@ -6,7 +6,7 @@ import {useParams, useNavigate} from 'react-router-dom';
 import toast from 'react-hot-toast';
 import '../App.css'
 import Shop from './Shop';
-import Navvbar from './Navvbar';
+import Navvbar from './components/Navvbar.jsx';
 
 
 
