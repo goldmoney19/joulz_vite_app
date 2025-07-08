@@ -3,6 +3,7 @@ import {useState , useEffect} from 'react'
 import {Container,Col,Row, Nav, Navbar,NavLink,Button} from 'react-bootstrap'
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
+import Navvbar from './components/Navvbar.jsx'
  const user = localStorage.getItem('user');
  import Cookies from "cookie-universal"
 const cookies = new Cookies();
