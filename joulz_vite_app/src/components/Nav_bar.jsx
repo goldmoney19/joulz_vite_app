@@ -10,7 +10,7 @@ const cookies = new Cookies();
   
 
 
-function Navbar() {
+function Nav_bar() {
 
   const token = document.cookie
  const navigate = useNavigate();
@@ -77,4 +77,4 @@ function Navbar() {
 
 }
 
-export default Navbar
+export default Nav_bar
