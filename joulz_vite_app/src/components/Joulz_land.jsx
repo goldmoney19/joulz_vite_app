@@ -20,7 +20,7 @@ const Joulz_land = () => {
    
              return <div> 
                 <Container  className="joulz_landContainer">
-                    <Row className="joulz_landRow" style={{backgroundColor:"rgba(0,0,0,0.9)", paddingTop: "40px"}}>
+                    <Row className="joulz_landRow" style={{backgroundColor:"rgba(0,0,0,0.9)", paddingTop: "0px"}}>
                         <Col style = {{marginBottom:"70px"}}>
                         <img src = {image4} style = {{height:"150px", width:"150px", borderRadius:"100%"}} />
                         </Col>
