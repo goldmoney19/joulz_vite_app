@@ -3,6 +3,7 @@ import {Container, Row, Col,Nav, Navbar,NavLink,Button} from 'react-bootstrap'
 import {useState , useEffect} from 'react'
 import axios from 'axios';
 import '../App.css'
+import Navvbar from './Navvbar';
 
 import Cookies from "cookie-universal"
 
@@ -43,6 +44,7 @@ function PortfolioDisplay() {
              return (
                 <div > 
              <Container className='portfolio_con'>
+                   <Navvbar />
                 <Row className='portfolio_text_row'>
                     <Col>
                     <h4 className='portfolio_text' style={{fontFamily: "EB Garamond,serif"}}>Our Portfolio</h4>
