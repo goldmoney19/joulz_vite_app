@@ -1,4 +1,4 @@
-// import '../App.css'
+import '../App.css'
 import React from 'react'
 import {Container, Row, Col,Nav, Navbar,NavLink,Button} from 'react-bootstrap'
 import image3 from '../assets/uju2.jpg'
@@ -12,7 +12,7 @@ const imagg2 = image2;
 const imagg1 = image1;
 
 function About(){
-   console.log("about page");
+ 
              return <> 
       <div>
      
