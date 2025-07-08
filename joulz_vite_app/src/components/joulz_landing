@@ -16,7 +16,7 @@ import '../App.css'
 
 
 
-const Joulz_land = () => {
+const Joulz_landing = () => {
    
              return <div> 
                 <Container  className="joulz_landContainer">
@@ -129,4 +129,4 @@ const Joulz_land = () => {
      
 }  
 
-export default  Joulz_land
+export default  Joulz_landing
