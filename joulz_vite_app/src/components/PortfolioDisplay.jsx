@@ -2,7 +2,7 @@ import React from 'react'
 import {Container, Row, Col,Nav, Navbar,NavLink,Button} from 'react-bootstrap'
 import {useState , useEffect} from 'react'
 import axios from 'axios';
-
+import '../App.css'
 
 import Cookies from "cookie-universal"
 
@@ -47,7 +47,7 @@ function PortfolioDisplay() {
                     <Col>
                     <h4 className='portfolio_text' style={{fontFamily: "EB Garamond,serif"}}>Our Portfolio</h4>
                
-        <p className='portfolio_text2'>
+        <p className='portfolio_text2' style={{fontFamily: "EB Garamond,serif"}}>
          Joulz Interiors has successfully designed and executed luxury homes,
         high-end corporate offices, premium retail stores, and boutique hospitality
       spaces. Our work blends modern elegance with timeless charm, delivering a signature aesthetic that stands out.
