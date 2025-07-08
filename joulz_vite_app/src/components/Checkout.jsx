@@ -89,14 +89,14 @@ const user_id = localStorage.getItem("user-id");
  <Row style = {{border:'none',marginBottom:'120px',paddingTop:'100px'}}>
        
         <Col sm = {6} style = {{textAlign:'left'}}>
-         <h4>Delivery Information</h4>
+         <h4 style = {{fontFamily: "EB Garamond,serif"}}>Delivery Information</h4>
          <br></br>
             <form onSubmit = {handleSubmit}>
       <label></label><br></br>
          <input 
          name='title'
-           type='text'  
-           style = {{backgroundColor:'white', color:'black',borderRadius:'12px'}}
+           type='text' 
+           style = {{backgroundColor:'white', color:'black',borderRadius:'12px',fontFamily: "EB Garamond,serif"}}
            placeholder = 'fullname'
          value = {fullname} 
            onChange = {(e)=>{setFullname(e.target.value)}} 
@@ -108,7 +108,7 @@ const user_id = localStorage.getItem("user-id");
          <textarea 
          value ={address}
          style = {{backgroundColor:'white', color:'black',
-         borderRadius:'12px'}}
+         borderRadius:'12px',fontFamily: "EB Garamond,serif"}}
          placeholder = 'address'
            name='description'
            onChange = {(e)=>{setAddress(e.target.value)}}
@@ -119,7 +119,7 @@ const user_id = localStorage.getItem("user-id");
         <br></br>
    <label></label>
          <textarea 
-         style = {{backgroundColor:'white', color:'black',borderRadius:'12px'}}
+         style = {{backgroundColor:'white', color:'black',borderRadius:'12px',fontFamily: "EB Garamond,serif"}}
          placeholder = 'state'
           value ={state}
         name='design'
@@ -136,7 +136,7 @@ const user_id = localStorage.getItem("user-id");
         
 
         <button  type='submit' 
-        style = {{borderRadius:'12px',fontSize:'13px',fontWeight:'bold'}}
+        style = {{borderRadius:'12px',fontSize:'13px',fontWeight:'bold',fontFamily: "EB Garamond,serif"}}
         className = 'btn btn-sm btn-warning'
         >Place Order</button>
         <br></br>
@@ -148,27 +148,27 @@ const user_id = localStorage.getItem("user-id");
        
           
             <Col  sm = {6}>
-             <h4>Cart Information</h4>
+             <h4  style = {{fontFamily: "EB Garamond,serif"}}>Cart Information</h4>
          <br></br>
                             <table  style = {{border:'none',width:'100%'}}>
                                 <thead>
                                     <tr>
-                                      <td>title</td>
-                                      <td>image</td>
-                                      <td>price</td>
-                                       <td>quantity</td>
-                                        <td>total</td>
+                                      <td  style = {{fontFamily: "EB Garamond,serif"}}>title</td>
+                                      <td  style = {{fontFamily: "EB Garamond,serif"}}>image</td>
+                                      <td  style = {{fontFamily: "EB Garamond,serif"}}>price</td>
+                                       <td  style = {{fontFamily: "EB Garamond,serif"}}>quantity</td>
+                                        <td  style = {{fontFamily: "EB Garamond,serif"}}>total</td>
                                     </tr>
                                 </thead>
                                  <tbody>
                                    { formData.map((item, index) =>(  
                                     <tr key ={index}>
-             <td style={{fontSize: '13px'}}> {item.productId?.title}</td>
-             <td><img style={{height: '50px', width: '50px'}}  src = 
+             <td style={{fontSize: '13px',fontFamily: "EB Garamond,serif"}}> {item.productId?.title}</td>
+             <td><img style={{height: '50px', width: '50px',fontFamily: "EB Garamond,serif"}}  src = 
        {item.productId.image}></img></td>
-       <td style={{fontSize: '13px', fontWeight:"normal"}}>$ {item.productId?.price}</td>
-    <td  style={{fontSize: '13px', fontWeight:"normal"}}>{item.quantity}</td>
- <td>${(item.productId.price * item.quantity).toFixed(2)}</td>
+       <td style={{fontSize: '13px', fontWeight:"normal",fontFamily: "EB Garamond,serif"}}>$ {item.productId?.price}</td>
+    <td  style={{fontSize: '13px', fontWeight:"normal",fontFamily: "EB Garamond,serif"}}>{item.quantity}</td>
+ <td style={{fontFamily: "EB Garamond,serif"}}>${(item.productId.price * item.quantity).toFixed(2)}</td>
                                     </tr>
                                                                           ))
 }
@@ -178,7 +178,7 @@ const user_id = localStorage.getItem("user-id");
 
                             </table> 
                             <br></br>
-                            <h6>Subtotal : {totalPrice}</h6>   
+                            <h6 style={{fontFamily: "EB Garamond,serif"}}>Subtotal : {totalPrice}</h6>   
             </Col>                               
  </Row>
  <br></br>
