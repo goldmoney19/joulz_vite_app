@@ -4,7 +4,7 @@ import {Button, Nav} from 'react-bootstrap'
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import toast from 'react-hot-toast';
-import Navvbar from './components/Navvbar.jsx';
+
 
 
 
@@ -50,7 +50,7 @@ console.log(formData);
 
 
      return <div style = {{ fontFamily:' "EB Garamond",serif'}}> 
-       <Navvbar />
+   
         <br></br>
          <h2 >Sign up</h2>
         <form onSubmit={handleSubmit} encType='multipart/form-data'>
