@@ -29,6 +29,7 @@ import WhyChoose from './components/WhyChoose'
 import ProtectedAdminRoute from './components/ProtectedAdminRoute'
 import Unauthorized from './components/Unauthorized'
 import UpdateProduct from './components/UpdateProduct'
+import Joulz_land from './components/Joulz_land'
 
 
 
@@ -144,6 +145,8 @@ function App() {
     <Route path = "/why_choose" element = {<WhyChoose />} />
 
         <Route path = "/contact" element = {<Contact />} />
+
+     <Route path = "/joulz_land" element = {<Joulz_land />} />
 
             <Route path = "/update_product/:id" element = {<UpdateProduct />} />
   <Route path = "/productDetails/:id" element = {<ProductDetails />} />
