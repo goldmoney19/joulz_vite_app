@@ -3,7 +3,7 @@ import {Container, Row, Col,Nav, Navbar,NavLink,Button} from 'react-bootstrap'
 import {useState , useEffect} from 'react'
 import axios from 'axios';
 import '../App.css'
-import Navvbar from './Navvbar';
+import Navvbar from './components/Navvbar.jsx'
 
 import Cookies from "cookie-universal"
 
