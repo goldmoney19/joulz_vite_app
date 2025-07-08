@@ -5,7 +5,7 @@ import image3 from '../assets/uju2.jpg'
 import image2 from '../assets/mission.jpeg'
 import image1 from '../assets/vision.png'
 import Footer from './Footer'
-import Navvbar from './components/Navvbar.jsx'
+
 
 const imagg3 = image3;
 const imagg2 = image2;
@@ -17,7 +17,7 @@ function About(){
       <div>
      
        <Container fluid className='aboutPage_con'>
-          <Navvbar />
+       
  <h3>Founder's Message</h3><br></br>
           <Row className='mx-auto about_pageCover'> 
            
