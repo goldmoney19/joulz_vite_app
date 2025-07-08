@@ -32,10 +32,10 @@ function Navvbar() {
       
       return( <div>
 
-<Navbar collapseOnSelect expand="lg" className="navbarr_body" fixed="top">
+<Navbar collapseOnSelect expand="lg" className="navbarr_body  navbar-dark " fixed="top" style={{backgroundColor:"black"}}>
       <Container style={{fontFamily: "EB Garamond,serif"}}>
         <Navbar.Brand href="/">Joulz Apparel</Navbar.Brand>
-        <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+        <Navbar.Toggle aria-controls="responsive-navbar-nav" className="" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">
           <Nav.Link href ="/">Home</Nav.Link>
