@@ -34,14 +34,14 @@ function Navvbar() {
 
 <Navbar collapseOnSelect expand="lg" className="navbarr_body  navbar-dark " fixed="top" style={{backgroundColor:"black"}}>
       <Container style={{fontFamily: "EB Garamond,serif"}}>
-        <Navbar.Brand href="/">Joulz Apparel</Navbar.Brand>
+        <Navbar.Brand href="/">Joulz Interiors</Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" className="" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">
           <Nav.Link href ="/">Home</Nav.Link>
           
           <Nav.Link href ="/profile_page">Profile</Nav.Link>
-            <Nav.Link href ="/About">About</Nav.Link>
+            <Nav.Link href ="/About">About us</Nav.Link>
              <Nav.Link href ="/portfolio_display">Portfolios</Nav.Link>
              <Nav.Link href ="/shop">Shop</Nav.Link>
             <Nav.Link href ="/userCart">Cart</Nav.Link>
