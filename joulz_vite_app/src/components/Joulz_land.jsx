@@ -26,11 +26,12 @@ const Joulz_land = () => {
                         </Col>
                         <Col className="joulz_landCol" sm = {12} style = {{marginBottom:"70px"}}>
        <div className="col-sm-12 " style = {{marginBottom:"70px",color:"white", fontFamily: "EB Garamond,serif"}}>
-   <h1 className="title_text" style = {{fontSize:"19px"}}>JOULZ INTERIORS</h1>
+   <h1 className="title_text" style = {{fontSize:"19px", fontFamily: "EB Garamond,serif"}}>JOULZ INTERIORS</h1>
 
 		</div>
 
-		<div className="col-sm-12 disc_column1" style={{borderTop:"1px solid white", borderBottom:"1px solid white", color:"white", borderRadius:"15px",padding:"15px", fontFamily: "EB Garamond,serif"}}>
+		<div className="col-sm-12 disc_column1" style={{borderTop:"1px solid white",
+		borderBottom:"1px solid white", color:"white", borderRadius:"15px",padding:"15px", fontFamily: "EB Garamond,serif"}}>
    <p className="disc_text" >Joulz Interiors has successfully designed and executed luxury homes,
      high-end corporate offices, premium retail stores, and boutique hospitality spaces.</p>
    </div>
@@ -60,7 +61,7 @@ const Joulz_land = () => {
   <button type="button" className="btn btn-lg btn-outline-light" style={{height:"60px"}}><a href ="https://wa.me/23408033500421"
    style={{color:"white", textDecoration:"none"}}><img src = {image5} style={{height: "35px",
   width: "35px",marginRight: "20px",backgroundSize: "cover",backgroundRepeat: "no-repeat", borderRadius: "25px"}} />
-  <span style={{fontSize:"14px",color:"white"}}>CONNECT ON WHATSAPP</span></a></button>
+  <span style={{fontSize:"14px",color:"white",fontFamily: "EB Garamond,serif"}}>CONNECT ON WHATSAPP</span></a></button>
 
 		</div>
 
@@ -69,7 +70,7 @@ const Joulz_land = () => {
   <button type="button" className="btn btn-lg btn-outline-light" style={{height:"60px"}}><a href ="https://www.instagram.com/jujuumobi_/"
    style={{color:"white",textDecoration:"none"}}><img src = {image6} style={{height: "35px",
   width: "35px",marginRight: "20px",backgroundSize: "cover",backgroundRepeat: "no-repeat", borderRadius: "25px"}} />
-  <span style={{fontSize:"14px",color:"white"}}>FOLLOW ON INSTAGRAM</span></a></button>
+  <span style={{fontSize:"14px",color:"white",fontFamily: "EB Garamond,serif"}}>FOLLOW ON INSTAGRAM</span></a></button>
 
 		</div>
 
@@ -77,7 +78,7 @@ const Joulz_land = () => {
   <button type="button" className="btn btn-lg btn-outline-light" style={{height:"60px"}}><a href ="https://t.me/+23408033500421"
    style={{color:"white", textDecoration:"none"}}><img src = {image7} style={{height: "35px",
   width: "35px",marginRight: "20px",backgroundSize: "cover",backgroundRepeat: "no-repeat", borderRadius: "25px"}}/>
-  <span style={{fontSize:"14px",color:"white"}}>CONNECT ON TELEGRAM</span></a></button>
+  <span style={{fontSize:"14px",color:"white",fontFamily: "EB Garamond,serif"}}>CONNECT ON TELEGRAM</span></a></button>
 
 		</div>
 
@@ -92,7 +93,7 @@ const Joulz_land = () => {
   <button type="button" className="btn btn-lg btn-outline-light" style={{height:"60px"}}><a href ="https://www.facebook.com/uju.amobi1/" 
   style={{color:"white", textDecoration:"none"}}><img src = {image8} style={{height: "35px",
   width: "35px",marginRight: "20px",backgroundSize: "cover",backgroundRepeat: "no-repeat", borderRadius: "25px"}}/>
-  <span style={{fontSize:"14px",color:"white"}}>FOLLOW ON FACEBOOK</span></a></button>
+  <span style={{fontSize:"14px",color:"white",fontFamily: "EB Garamond,serif"}}>FOLLOW ON FACEBOOK</span></a></button>
 
 		</div>
 
@@ -101,7 +102,7 @@ const Joulz_land = () => {
   <button type="button" className="btn btn-lg btn-outline-light" style={{height:"80px"}}><a href ="https://joulz-vite-app.vercel.app "
    style={{color:"white", textDecoration:"none"}}><img src = {image9} style={{height: "35px",
   width: "35px",marginRight: "20px",backgroundSize: "cover",backgroundRepeat: "no-repeat", borderRadius: "25px"}}/>
-  <span style={{fontSize:"14px",color:"white"}}>VISIT OUR WEBSITE</span></a></button>
+  <span style={{fontSize:"14px",color:"white",fontFamily: "EB Garamond,serif"}}>VISIT OUR WEBSITE</span></a></button>
 
 		</div>
 
