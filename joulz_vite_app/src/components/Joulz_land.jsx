@@ -98,7 +98,7 @@ const Joulz_land = () => {
 
 
 		<div className="col-sm-12 visitwebsite_column1" style={{marginBottom:"40px"}}>
-  <button type="button" className="btn btn-lg btn-outline-light" style={{height:"80px"}}><a href ="http://joulzinterior.great-site.net/ "
+  <button type="button" className="btn btn-lg btn-outline-light" style={{height:"80px"}}><a href ="https://joulz-vite-app.vercel.app "
    style={{color:"white", textDecoration:"none"}}><img src = {image9} style={{height: "35px",
   width: "35px",marginRight: "20px",backgroundSize: "cover",backgroundRepeat: "no-repeat", borderRadius: "25px"}}/>
   <span style={{fontSize:"14px",color:"white"}}>VISIT OUR WEBSITE</span></a></button>
