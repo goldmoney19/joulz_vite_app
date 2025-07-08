@@ -3,7 +3,7 @@ import { useLocation, useNavigate } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 import {Button, Container, Row, Col} from 'react-bootstrap'
-import Navvbar from './Navvbar';
+import Navvbar from './components/Navvbar.jsx';
 
 import Cookies from "cookie-universal"
 
