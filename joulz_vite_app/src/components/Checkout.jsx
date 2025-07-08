@@ -5,7 +5,7 @@ import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import toast from 'react-hot-toast';
 import Footer from './Footer';
-import Navvbar from './Navvbar';
+import Navvbar from './components/Navvbar.jsx'
 
 
 
