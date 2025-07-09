@@ -13,7 +13,7 @@ const cookies = new Cookies();
 function PortfolioDisplay() {
 
       const token = cookies.get("access-token");
-
+  const [isLoading, setIsLoading] = useState(true);
    const [products, setProducts] = useState([]);
 
                      useEffect(()=>{
@@ -32,7 +32,10 @@ function PortfolioDisplay() {
                            }
                      catch (error) {
              console.log("error while fetching", error) 
-            }
+            }finally{
+
+            setIsLoading(false);
+         }
         
                         }
         
@@ -43,6 +46,10 @@ function PortfolioDisplay() {
 
              return (
                 <div > 
+                         {
+                     isLoading ? (
+                     <div>loading...</div>
+                   ):( 
              <Container className='portfolio_con'>
               
                 <Row className='portfolio_text_row'>
@@ -92,6 +99,7 @@ function PortfolioDisplay() {
                 </Row>
 
              </Container>
+                            ) }
     
           </div> )
      }  
