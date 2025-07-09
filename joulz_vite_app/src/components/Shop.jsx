@@ -14,6 +14,7 @@ function Shop() {
 
       const token = cookies.get("access-token");
 
+      const [isLoading, setIsLoading] = useState(true);
    const [products, setProducts] = useState([]);
 
                      useEffect(()=>{
@@ -26,7 +27,10 @@ function Shop() {
                            }
                      catch (error) {
              console.log("error while fetching", error) 
-            }
+            }finally{
+
+            setIsLoading(false);
+         }
         
                         }
         
