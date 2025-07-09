@@ -37,6 +37,10 @@ function Shop() {
 
              return (
                 <div > 
+                       {
+                     isLoading ? (
+                     <div>loading...</div>
+                   ):(  
              <Container className='shop_con'>
 
                 <Row className='shop_text_row'>
@@ -80,6 +84,11 @@ function Shop() {
                 </Row>
 
              </Container>
+                             )
+
+
+                            }
+    
     
           </div> )
      }  
