@@ -30,6 +30,8 @@ import ProtectedAdminRoute from './components/ProtectedAdminRoute'
 import Unauthorized from './components/Unauthorized'
 import UpdateProduct from './components/UpdateProduct'
 import Joulz_land from './components/Joulz_land'
+import Portfolio_details from './components/Portfolio_details'
+
 
 
 
@@ -147,6 +149,9 @@ function App() {
         <Route path = "/contact" element = {<Contact />} />
 
      <Route path = "/joulz_land" element = {<Joulz_land />} />
+   
+     <Route path = "/portfolio_details/:id" element = {<Portfolio_details />} />
+   
 
             <Route path = "/update_product/:id" element = {<UpdateProduct />} />
   <Route path = "/productDetails/:id" element = {<ProductDetails />} />
