@@ -23,6 +23,7 @@ const Portfolio_details = () => {
 
    const token = cookies.get("access-token");
 
+     const [isLoading, setIsLoading] = useState(true);
    const [penthause, setPenthause] = useState([]);
    // const [productId, setProductId] = useState("");
     //  const [quantity , setQuantity] =  useState("1");
@@ -43,7 +44,10 @@ const Portfolio_details = () => {
     }
                      catch (error) {
      console.log("error while fetching", error) 
-    }
+    }finally{
+
+            setIsLoading(false);
+         }
      }
         
                     fetchUsers();
@@ -53,7 +57,10 @@ const Portfolio_details = () => {
 
 
      return  <div  style={{paddingTop:"70px"}}>
-
+      {
+                     isLoading ? (
+                     <div>loading...</div>
+                   ):(  
              <Container fluid >
    
                 <h4 className='details_text1'> {penthause.title}</h4>
@@ -110,7 +117,7 @@ const Portfolio_details = () => {
                 </Row>
 
              </Container>
-    
+      ) }
           </div> 
      }  
 
