@@ -79,17 +79,18 @@ console.log(error.response?.data);
 
                return ( 
                  <div> 
+                        {
+                     isLoading ? (
+                     <div>loading...</div>
+                   ):(
+
                   <Container className='userCart_row'>
                     
                   
                   <h3 style = {{fontFamily: "EB Garamond,serif"}}>Cart</h3>
                   <br></br>
                         <Row  >
-                     {
-                     isLoading ? (
-                     <div>loading...</div>
-                   ):(
-
+                   
                     <table>
                       <thead>
                         <tr>
@@ -117,10 +118,7 @@ console.log(error.response?.data);
                    </>))}
                                </tbody>
                                </table>
-                   )
-
-
-                            }
+                 
                      
 
                             </Row>
@@ -158,6 +156,7 @@ console.log(error.response?.data);
                              </Col>
                             </Row>
                        </Container>
+                            ) }
                    </div>
                     )
      
