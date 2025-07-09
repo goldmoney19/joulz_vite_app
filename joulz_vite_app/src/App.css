@@ -445,6 +445,15 @@ height: 300px;
   border: none;
 } */
 
+  .port_details_img{
+
+    height: 400px;
+     width: 50%;
+     margin-top:40px;
+     margin-bottom:40px;
+  }
+
+
 .details_cover{
 margin-top: 80px;
 border:none;
@@ -704,12 +713,28 @@ div.bubbles:nth-child(10){
 
 
 
-  /* .UserCart_totalNum{
 
 
-  } */
+
+
+
+
+
+
+
+
+
+
 
 @media screen and (max-width:1000px){
+
+	  .port_details_img{
+
+    height: 400px;
+     width: 100%;
+     margin-top:40px;
+     margin-bottom:40px;
+  }
 
   .aboutPage_con{
  font-family: "EB Garamond",serif;
