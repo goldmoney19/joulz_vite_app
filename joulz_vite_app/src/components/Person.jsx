@@ -139,7 +139,7 @@ fetchData();
            
 {portff.multipleImages.map((img, index) => (
 
-                          <img key ={index} style={{height: '30px', width: '30px'}}  src = {img}></img>
+                          <img key ={index} style={{height: '30px', width: '30px'}}  src = {img.url}></img>
 
             ))}
             </td>
