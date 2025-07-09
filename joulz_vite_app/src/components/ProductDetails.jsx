@@ -20,6 +20,7 @@ const cookies = new Cookies();
 const ProductDetails = () => {
 
    const token = cookies.get("access-token");
+        const [isLoading, setIsLoading] = useState(true);
 
    const [penthause, setPenthause] = useState([]);
    const [productId, setProductId] = useState("");
@@ -41,7 +42,11 @@ const ProductDetails = () => {
     }
                      catch (error) {
      console.log("error while fetching", error) 
-    }
+    }finally{
+
+            setIsLoading(false);
+         }
+        
      }
         
                     fetchUsers();
@@ -75,6 +80,10 @@ const ProductDetails = () => {
        }
 
      return  <div > 
+         {
+                     isLoading ? (
+                     <div>loading...</div>
+                   ):(  
              <Container fluid  >
      
 <h4 className='details_text1'> Product Details</h4>
@@ -145,7 +154,7 @@ const ProductDetails = () => {
                 </Row>
 
              </Container>
-    
+         ) }
           </div> 
      }  
 
