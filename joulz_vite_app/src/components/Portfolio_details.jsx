@@ -56,7 +56,7 @@ const Portfolio_details = () => {
 
              <Container fluid >
    
-                <h4 className='details_text1'> Portfolio Details</h4>
+                <h4 className='details_text1'> {penthause.title}</h4>
                <Row >
                     <>
 
