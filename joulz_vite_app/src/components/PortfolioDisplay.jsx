@@ -72,7 +72,7 @@ function PortfolioDisplay() {
                    products.map((item, index) => (
                     <Col  key = {index} xs = {6} sm={3} style={{marginTop:'50px'}}>
                     <div >
-             <Nav.Link href ={`/portfolioDetails/` +item._id} type='button'><img  style={{height: '150px', width: '150px'}}  src = {item.image}
+             <Nav.Link href ={`/Portfolio_details/` +item._id} type='button'><img  style={{height: '150px', width: '150px'}}  src = {item.image}
                        /></Nav.Link>
                        <br></br>
                       <p  className='shop_textTitle' style = {{fontFamily: "EB Garamond,serif"}}>{item.title}</p>
