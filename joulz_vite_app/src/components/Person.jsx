@@ -138,12 +138,12 @@ fetchData();
            
 {portff.multipleImages.map((img, index) => (
 
-                          <img key ={index} style={{height: '30px', width: '30px'}}  src = {portff.img}></img>
+                          <img key ={index} style={{height: '30px', width: '30px'}}  src = {img}></img>
 
             ))}
             </td>
 
-
+            
            <td className='btn btn-warning btn-sm'> <Nav.Link href ={`/updatePortfolio/` +portff._id} type='button'>edit</Nav.Link></td>
        <td className='btn btn-danger btn-sm'> <Nav.Link  onClick = {()=>deletePortfolio(portff._id)}>delete</Nav.Link></td>
      </tr>
