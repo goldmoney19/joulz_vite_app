@@ -62,7 +62,7 @@ const Portfolio_details = () => {
 
                      {penthause?.multipleImages?.map((img, index) => (
                  <Col sm = {12} key ={index} >
-     <span><img  style={{height: '400px', width: '50%',marginTop:'40px',marginBottom:'40px'}}  src = {`http://localhost:8000/${img}`}></img></span>
+     <span><img  style={{height: '400px', width: '50%',marginTop:'40px',marginBottom:'40px'}}  src = {img.url}></img></span>
                  </Col>
             ))}
    
