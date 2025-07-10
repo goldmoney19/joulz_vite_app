@@ -46,10 +46,7 @@ function PortfolioDisplay() {
 
              return (
                 <div > 
-                         {
-                     isLoading ? (
-                     <div>loading...</div>
-                   ):( 
+                       
              <Container className='portfolio_con'>
               
                 <Row className='portfolio_text_row'>
@@ -58,18 +55,14 @@ function PortfolioDisplay() {
                
         <p className='portfolio_text2' style={{fontFamily: "EB Garamond,serif"}}>
          Joulz Interiors has successfully designed and executed luxury homes,
-        high-end corporate offices, premium retail stores, and boutique hospitality
-      spaces. Our work blends modern elegance with timeless charm, delivering a signature aesthetic that stands out.
-     Let’s Create Something Extraordinary</p>
+        high-end corporate offices, premium retail stores,Let’s Create Something Extraordinary </p>
                     </Col>
                 </Row>
 
-                <Row className='shop_row2'>
-                    <Col>
-                    <p className='shop_text2'> </p>
-                    </Col>
-                </Row>
-
+                {
+                     isLoading ? (
+                     <div>loading...</div>
+                   ):( 
                 <Row className=''>
 
                    
@@ -97,9 +90,9 @@ function PortfolioDisplay() {
                    
                 
                 </Row>
-
+  ) }
              </Container>
-                            ) }
+                          
     
           </div> )
      }  
