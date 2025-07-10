@@ -53,7 +53,7 @@ function Shop() {
               
                {
                      isLoading ? (
-                     <div>loading...</div>
+                     <div style={{color:"red"}}> loading... </div>
                    ):(  
                 <Row className='shop_text_row3' >
 
