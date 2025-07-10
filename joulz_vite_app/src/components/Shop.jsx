@@ -41,10 +41,7 @@ function Shop() {
 
              return (
                 <div > 
-                       {
-                     isLoading ? (
-                     <div>loading...</div>
-                   ):(  
+                     
              <Container className='shop_con'>
 
                 <Row className='shop_text_row'>
@@ -53,13 +50,11 @@ function Shop() {
                     </Col>
                 </Row>
 
-                <Row className='shop_row2'>
-                    <Col>
-                    {/* <p className='shop_text2'  >Joulz Interiors we work in different aspect
-                         of Home Decoration  </p> */}
-                    </Col>
-                </Row>
-
+              
+               {
+                     isLoading ? (
+                     <div>loading...</div>
+                   ):(  
                 <Row className='shop_text_row3' >
 
                    
@@ -86,12 +81,10 @@ function Shop() {
                    
                 
                 </Row>
+                            ) }
 
              </Container>
-                             )
-
-
-                            }
+                            
     
     
           </div> )
