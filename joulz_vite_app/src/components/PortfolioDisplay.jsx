@@ -61,7 +61,7 @@ function PortfolioDisplay() {
 
                 {
                      isLoading ? (
-                     <div>loading...</div>
+                     <div style={{color:"red"}}>loading...</div>
                    ):( 
                 <Row className=''>
 
