@@ -65,14 +65,13 @@ function Karuzel() {
       </div>
 
       <div className="link_cover">
-      <a href=""><button className="btn link_btnn"><img src = {telegram }
+      <a href="https://t.me/+2348033500421"><button className="btn link_btnn"><img src = {telegram }
                        /></button></a>
-      <a href=""><button className="btn link_btnn"><img src = {facebook }
-                       /></button></a>
-      <a href=""><button className="btn link_btnn"><img src = {whatsapp }
+   
+      <a href="https://wa.me/234803500421"><button className="btn link_btnn"><img src = {whatsapp }
                        /></button></a>
       
-      <a href=""><button className="btn link_btnn"><img src = {instagram }
+      <a href="https://www.instagram.com/joulz_interiors?igsh=bHo3OVma2drYW8w"><button className="btn link_btnn"><img src = {instagram }
                       /></button></a>
       </div>
         </Carousel.Caption>
@@ -95,14 +94,13 @@ function Karuzel() {
       </div>
 
       <div className="link_cover">
-      <a href=""><button className="btn link_btnn"><img src = {telegram }
+      <a href="https://t.me/+2348033500421"><button className="btn link_btnn"><img src = {telegram }
                        /></button></a>
-      <a href=""><button className="btn link_btnn"><img src = {facebook }
-                       /></button></a>
-      <a href=""><button className="btn link_btnn"><img src = {whatsapp }
+
+      <a href="https://wa.me/234803500421"><button className="btn link_btnn"><img src = {whatsapp }
                        /></button></a>
       
-      <a href=""><button className="btn link_btnn"><img src = {instagram }
+      <a href="https://www.instagram.com/joulz_interiors?igsh=bHo3OVma2drYW8w"><button className="btn link_btnn"><img src = {instagram }
                       /></button></a>
       </div>
         </Carousel.Caption>
