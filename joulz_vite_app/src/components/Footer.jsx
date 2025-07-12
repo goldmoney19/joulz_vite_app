@@ -6,7 +6,7 @@ import {Container, Row, Col,Nav, Navbar,NavLink,Button} from 'react-bootstrap'
 
 function Footer(){
    
-             return <div style={{backgroundColor:'rgba(0, 0, 0, 0.1)', color: 'rgb(100, 52, 52)' }} >
+             return <div style={{backgroundColor:'rgba(0, 0, 0, 0.1)', color: 'black' }} >
        
                    <Container fluid style={{fontFamily: "EB Garamond,serif"}}>
                     <Row>
