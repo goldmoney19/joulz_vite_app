@@ -45,7 +45,7 @@ function Karuzel() {
       <a href=""><button className="btn link_btnn"><img src = {whatsapp }
                        /></button></a>
       
-      <a href=""><button className="btn link_btnn"><img src = {instagram }
+      <a href="https://www.instagram.com/joulz_interiors?igsh=bHo3OVma2drYW8w"><button className="btn link_btnn"><img src = {instagram }
                       /></button></a>
       </div>
         </Carousel.Caption>
