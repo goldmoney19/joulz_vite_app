@@ -3,11 +3,11 @@ import Carousel from 'react-bootstrap/Carousel'
 import image from '../assets/interior1.jpg'
 import image1 from '../assets/interior2.jpg'
 import image2 from '../assets/interior3.jpg'
-import { Container } from 'react-bootstrap'
 import telegram from '../assets/telelogo.png'
 import facebook from '../assets/facelogo.png'
 import whatsapp from '../assets/whatsapp-256.png'
 import instagram from '../assets/insta.png'
+import {Container, Nav, Navbar} from 'react-bootstrap'
 
 
 
@@ -33,8 +33,8 @@ function Karuzel() {
           <p className="caption_text1">Joulz Interiors</p>
           <p className="caption_text2">Where Luxury Meets Timeless Elegance</p>
            <div className="hero">
-        <a href="/portfolioDisplay"><button className="btn btn-outline-light portfolio_btn">portfolio</button></a>
-        <a href="/shop"><button className="btn btn-outline-light shop_btn">shop</button></a>
+       <Nav.Link href ="/portfolioDisplay"><button className="btn btn-outline-light shop_btn">portfolio</button></Nav.Link>
+               <Nav.Link href ="/shop"><button className="btn btn-outline-light shop_btn">shop</button></Nav.Link>
       </div>
 
       <div className="link_cover">
@@ -60,8 +60,8 @@ function Karuzel() {
           <p className="caption_text1">Joulz Landscape</p>
           <p className="caption_text2">Multi Award Winning Designer.</p>
            <div className="hero">
-        <a href="/portfolioDisplay"><button className="btn btn-outline-light portfolio_btn">portfolio</button></a>
-        <a href="//shop"><button className="btn btn-outline-light shop_btn">shop</button></a>
+         <Nav.Link href ="/portfolioDisplay"><button className="btn btn-outline-light shop_btn">portfolio</button></Nav.Link>
+               <Nav.Link href ="/shop"><button className="btn btn-outline-light shop_btn">shop</button></Nav.Link>
       </div>
 
       <div className="link_cover">
@@ -89,8 +89,8 @@ function Karuzel() {
           Specialist in Bespoke, Kitchens, Furniture , Joinery.
           </p>
            <div className="hero">
-        <a href="/portfolioDisplay"><button className="btn btn-outline-light portfolio_btn">portfolio</button></a>
-        <a href="/shop"><button className="btn btn-outline-light shop_btn">shop</button></a>
+      <Nav.Link href ="/portfolioDisplay"><button className="btn btn-outline-light shop_btn">portfolio</button></Nav.Link>
+               <Nav.Link href ="/shop"><button className="btn btn-outline-light shop_btn">shop</button></Nav.Link>
       </div>
 
       <div className="link_cover">
