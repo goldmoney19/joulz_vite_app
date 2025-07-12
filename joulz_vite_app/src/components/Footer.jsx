@@ -15,8 +15,8 @@ function Footer(){
 
 
    <p style={{fontWeight:'bold'}} >Get in touch</p>
-   <p >Tel: +234 09087665432</p>
-   <p >Website: www.Joulzinterior.com</p>
+   <p >Tel: +234 08033500421</p>
+   <p >Website: www.tinyurl/intjoulz</p>
   
  </Col>
 <br></br><br></br>
