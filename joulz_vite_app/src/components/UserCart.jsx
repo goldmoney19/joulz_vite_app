@@ -80,7 +80,7 @@ console.log(error.response?.data);
                return ( 
                  <div> 
                         {
-                    bart = "" ? (
+                    bart == "" ? (
                      <div>no cart</div>
                    ):(
 
