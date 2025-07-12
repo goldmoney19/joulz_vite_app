@@ -80,8 +80,8 @@ console.log(error.response?.data);
                return ( 
                  <div> 
                         {
-                     isLoading ? (
-                     <div>loading...</div>
+                    bart = "" ? (
+                     <div>no cart</div>
                    ):(
 
                   <Container className='userCart_row'>
