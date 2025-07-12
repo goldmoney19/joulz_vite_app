@@ -33,7 +33,7 @@ function Karuzel() {
           <p className="caption_text1">Joulz Interiors</p>
           <p className="caption_text2">Where Luxury Meets Timeless Elegance</p>
            <div className="hero">
-       <Nav.Link href ="/portfolio_display"><button className="btn btn-outline-light shop_btn">portfolio</button></Nav.Link>
+       <Nav.Link href ="/portfolio_display">portfolio</Nav.Link>
                <Nav.Link href ="/shop"><button className="btn btn-outline-light shop_btn">shop</button></Nav.Link>
       </div>
 
@@ -60,7 +60,7 @@ function Karuzel() {
           <p className="caption_text1">Joulz Landscape</p>
           <p className="caption_text2">Multi Award Winning Designer.</p>
            <div className="hero">
-         <Nav.Link href ="/portfolio_display"><button className="btn btn-outline-light shop_btn">portfolio</button></Nav.Link>
+         <Nav.Link href ="/portfolio_display">portfolio</Nav.Link>
                <Nav.Link href ="/shop"><button className="btn btn-outline-light shop_btn">shop</button></Nav.Link>
       </div>
 
@@ -89,8 +89,8 @@ function Karuzel() {
           Specialist in Bespoke, Kitchens, Furniture , Joinery.
           </p>
            <div className="hero">
-      <Nav.Link href ="/portfolio_display"><button className="btn btn-outline-light shop_btn">portfolio</button></Nav.Link>
-               <Nav.Link href ="/shop"><button className="btn btn-outline-light shop_btn">shop</button></Nav.Link>
+      <Nav.Link href ="/portfolio_display">portfolio</Nav.Link>
+               <Nav.Link href ="/shop">shop</Nav.Link>
       </div>
 
       <div className="link_cover">
