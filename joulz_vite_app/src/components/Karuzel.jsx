@@ -33,8 +33,8 @@ function Karuzel() {
           <p className="caption_text1">Joulz Interiors</p>
           <p className="caption_text2">Where Luxury Meets Timeless Elegance</p>
            <div className="hero">
-        <a href=""><button className="btn btn-outline-light portfolio_btn">portfolio</button></a>
-        <a href=""><button className="btn btn-outline-light shop_btn">shop</button></a>
+        <a href="/portfolioDisplay"><button className="btn btn-outline-light portfolio_btn">portfolio</button></a>
+        <a href="/shop"><button className="btn btn-outline-light shop_btn">shop</button></a>
       </div>
 
       <div className="link_cover">
@@ -60,8 +60,8 @@ function Karuzel() {
           <p className="caption_text1">Joulz Landscape</p>
           <p className="caption_text2">Multi Award Winning Designer.</p>
            <div className="hero">
-        <a href=""><button className="btn btn-outline-light portfolio_btn">portfolio</button></a>
-        <a href=""><button className="btn btn-outline-light shop_btn">shop</button></a>
+        <a href="/portfolioDisplay"><button className="btn btn-outline-light portfolio_btn">portfolio</button></a>
+        <a href="//shop"><button className="btn btn-outline-light shop_btn">shop</button></a>
       </div>
 
       <div className="link_cover">
@@ -89,8 +89,8 @@ function Karuzel() {
           Specialist in Bespoke, Kitchens, Furniture , Joinery.
           </p>
            <div className="hero">
-        <a href=""><button className="btn btn-outline-light portfolio_btn">portfolio</button></a>
-        <a href=""><button className="btn btn-outline-light shop_btn">shop</button></a>
+        <a href="/portfolioDisplay"><button className="btn btn-outline-light portfolio_btn">portfolio</button></a>
+        <a href="/shop"><button className="btn btn-outline-light shop_btn">shop</button></a>
       </div>
 
       <div className="link_cover">
