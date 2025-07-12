@@ -54,18 +54,7 @@ function Shop() {
                {
                      isLoading ? (
                      <div style={{color:"red"}}> loading... </div>
-                             
-                    <div>
-                       <Nav.Link  type='button'><img  style={{height: '150px', width: '150px'}}  src = {image}
-                       /></Nav.Link>
-                      <p  className='shop_text4'>good shoe</p>
-                        <p  className='shop_text3'>nice shooes you got there</p>
-                        <p className='shop_price'>600</p>
-                        
-                    </div>
-               
-                           
-                   ):(  
+                    ):(  
                 <Row className='shop_text_row3' >
 
                    
