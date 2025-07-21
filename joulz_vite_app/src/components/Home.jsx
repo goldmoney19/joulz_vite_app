@@ -34,9 +34,9 @@ function Home() {
          
           
    <WeOffer />
-   <br></br>
+{/*    <br></br>
     <br></br>
-   <WhyChoose />
+   <WhyChoose /> */}
    <Footer />
           </div> )
      }  
