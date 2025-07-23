@@ -35,7 +35,7 @@ app.use(cookieParser());
 // ];
 
 app.use(cors({
-origin:  origin: 'http://localhost:8081',
+origin:'http://localhost:8081',
    credentials: true,
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization']
@@ -49,7 +49,7 @@ app.use(cors(corsOptions));
 
 
 
-// app.use('/uploads', express.static(path.join(__dirname, 'Uploads')));
+//app.use('/uploads', express.static(path.join(__dirname, 'Uploads')));
 
 // app.use(express.static(path.join(__dirname, 'dist')));
 
