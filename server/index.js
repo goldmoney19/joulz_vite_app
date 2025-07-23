@@ -41,7 +41,8 @@ origin:'http://localhost:8081',
   allowedHeaders: ['Content-Type', 'Authorization']
 }));
 const corsOptions = {
-  origin: 'https://joulz-vite-app.vercel.app', // <-- Replace with your actual Vercel frontend URL
+ 
+  origin: 'http://localhost:8081', // <-- Replace with your actual Vercel frontend URLhttps://joulz-vite-app.vercel.app
   optionsSuccessStatus: 200 // Some legacy browsers (IE11, various SmartTVs) choke on 204
 };
 app.use(cors(corsOptions));
