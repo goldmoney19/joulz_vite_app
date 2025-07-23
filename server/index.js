@@ -23,9 +23,27 @@ const app = express();
 app.use(bodyParser.json());
 app.use(cookieParser());
 
+const allowedOrigins = [
+  'https://joulz-vite-app.vercel.app', // Your Vercel frontend
+  'http://localhost:8081',             // Expo Go development server (for web and Android)
+  'http://localhost:19000',            // Another common Expo development port
+  'http://localhost:19001',            // Another common Expo development port
+  // If you test on a physical device via LAN, you might need your computer's local IP:
+  // 'http://YOUR_COMPUTERS_LOCAL_IP:8081',
+  // 'http://YOUR_COMPUTERS_LOCAL_IP:19000',
+  // You can find your computer's local IP by running `ipconfig` (Windows) or `ifconfig`/`ip addr` (macOS/Linux)
+];
+
 app.use(cors({
-  origin: 'https://joulz-vite-app.vercel.app', // <-- Make sure it has https://
-  credentials: true,
+origin: (origin, callback) => {
+      // Allow requests with no origin (like mobile apps or curl requests)
+      if (!origin) return callback(null, true);
+      if (allowedOrigins.includes(origin)) {
+        callback(null, true);
+      } else {
+        callback(new Error("Not allowed by CORS"));
+      }
+    },  credentials: true,
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization']
 }));
