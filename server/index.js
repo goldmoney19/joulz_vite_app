@@ -50,7 +50,7 @@ origin:'http://localhost:8081',
 
 
 
-app.use('/uploads', express.static(path.join(__dirname, 'Uploads')));
+// app.use('/uploads', express.static(path.join(__dirname, 'Uploads')));
 
 // app.use(express.static(path.join(__dirname, 'dist')));
 
