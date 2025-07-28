@@ -171,15 +171,15 @@ export const updateUserByid = async(req, res) =>  {
 
 export const addToCart = async(req, res) =>  {
      
-  const {productId, quantity} = req.body;
+  const {productId, quantity, userId} = req.body;
   // console.log(, productId, quantity) ;
-   const  _idd = req.body.user_id
+   // const  _idd = req.body.user_id
   
 
       // res.send("cart add");
 
 try{
-   const userr = await User.findById(_idd);
+   const userr = await User.findById(userId);
 
    console.log(userr);
 
