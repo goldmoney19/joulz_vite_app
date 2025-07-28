@@ -171,7 +171,7 @@ export const updateUserByid = async(req, res) =>  {
 
 export const addToCart = async(req, res) =>  {
      
-  const {productId, quantity, storedUserId} = req.body;
+  const {produktId, quantity, storedUserId} = req.body;
   // console.log(, productId, quantity) ;
    // const  _idd = req.body.user_id
   
@@ -187,7 +187,7 @@ try{
     console.log("user not present");
     res.status(400).json({'message':'user not present'});
    }
-         userr.cart.push({productId, quantity:quantity || 1});
+         userr.cart.push({produktId, quantity:quantity || 1});
          await userr.save();
          res.json(userr.cart)
       
