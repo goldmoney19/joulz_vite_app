@@ -173,7 +173,7 @@ export const addToCart = async(req, res) =>  {
      
   const {productId, quantity, storedUserId} = req.body;
   // console.log(, productId, quantity) ;
-    const  _idd = req.body.user_id
+    const  _idd = storedUserId;
   
 
       // res.send("cart add");
