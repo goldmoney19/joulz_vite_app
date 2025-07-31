@@ -3,7 +3,7 @@ const checkoutRoute = express.Router();
 import authMiddleware from "../utils/authMiddleware.js";
 
 
-import { _checkout } from "../controller/orderController.js";
+import { _checkout, getOrderById } from "../controller/orderController.js";
 
 
 
