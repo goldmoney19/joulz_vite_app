@@ -73,3 +73,29 @@ export const _checkout =  async(req, res) => {
 
 
 }
+
+
+
+
+
+export const getOrderById = async(req, res) => {
+
+               try{
+
+                     const id = req.params.id;
+                                     const  UserExist = await Order.findById(id);
+                    
+                                    if(!UserExist){
+                    
+                                      return  res.status(404).json({message:"user not found"});
+                                    }
+                                      res.status(200).json(UserExist);
+
+               }
+             catch(error){
+
+              res.status(500).json({errorMessage:error.message});
+             }
+
+
+}
