@@ -64,6 +64,7 @@ const user_id = localStorage.getItem("user-id");
 
        
                      console.log(response.data);
+           console.log(response.data._id);
                     //  alert("order successful");
                      toast.success("order placed successfully", {position:"top-right"});
                     // navigate("/order_confirmation", { state: { clientOrder:response.data.clientOrder}});
