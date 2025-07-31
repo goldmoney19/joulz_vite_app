@@ -8,7 +8,7 @@ import { _checkout } from "../controller/orderController.js";
 
 
 checkoutRoute.post("/check_out", _checkout);
-
+checkoutRoute.get("/order/:id", getOrderById);
 
 
 
