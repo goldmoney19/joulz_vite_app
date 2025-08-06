@@ -33,9 +33,21 @@ app.use(cookieParser());
 //   // 'http://YOUR_COMPUTERS_LOCAL_IP:19000',
 //   // You can find your computer's local IP by running `ipconfig` (Windows) or `ifconfig`/`ip addr` (macOS/Linux)
 // ];
+const allowedOrigins = [
 
+ 'http://localhost:8081',
+  'https://joulz-vite-app.vercel.app' 
+];
 app.use(cors({
-origin:'http://localhost:8081',
+ origin: function (origin, callback) {
+  
+    if (!origin) return callback(null, true);
+    if (allowedOrigins.includes(origin)) {
+      return callback(null, true);
+    } else {
+      return callback(new Error('Not allowed by CORS'));
+    }
+  },
    credentials: true,
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization']
