@@ -35,7 +35,7 @@ app.use(cookieParser());
 // ];
 const allowedOrigins = [
 
- 'http://localhost:8081',
+ 'http://localhost:8082',
   'https://joulz-vite-app.vercel.app' 
 ];
 app.use(cors({
